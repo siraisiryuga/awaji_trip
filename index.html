@@ -1,297 +1,266 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>淡路島1泊2日旅行プラン｜伊藤軍団</title>
-  <meta name="description" content="A 1-night, 2-day travel guide for Awaji Island. Created for the Ito Squad.">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>淡路島1泊2日旅行プラン｜伊藤軍団</title>
 
-  <style>
-    :root {
-      --main-color: #3A7D5D;
-      --accent-color: #E8F3EC;
-      --text-color: #222;
-      --bg-color: #f6f8f7;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
 
-    * {
-      box-sizing: border-box;
-    }
+<style>
+:root{
+  --main:#1F3D2B;
+  --bg:#F8F6F2;
+  --card:#FFFFFF;
+  --beige:#EFE9E2;
+}
 
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
-      background: var(--bg-color);
-      color: var(--text-color);
-      line-height: 1.9;
-    }
+*{box-sizing:border-box;}
 
-    .cover img {
-      width: 100%;
-      height: 65vh;
-      object-fit: cover;
-      border-radius: 0 0 30px 30px;
-    }
+body{
+  margin:0;
+  font-family:"Noto Sans JP", sans-serif;
+  background:var(--bg);
+  color:#222;
+  line-height:1.9;
+}
 
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 50px 20px 100px;
-    }
+/* ===== HERO ===== */
 
-    h1 {
-      text-align: center;
-      font-size: 40px;
-      letter-spacing: 3px;
-      margin-top: 30px;
-    }
+.hero{
+  position:relative;
+  height:85vh;
+  overflow:hidden;
+}
 
-    h2 {
-      margin-top: 80px;
-      font-size: 24px;
-      border-left: 6px solid var(--main-color);
-      padding-left: 16px;
-    }
+.hero img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
 
-    h3 {
-      margin-top: 50px;
-      font-size: 20px;
-    }
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to bottom, rgba(0,0,0,0.35), rgba(0,0,0,0.55));
+}
 
-    p {
-      font-size: 15px;
-    }
+.hero-text{
+  position:absolute;
+  bottom:15%;
+  left:10%;
+  color:white;
+  z-index:2;
+}
 
-    .card {
-      background: white;
-      padding: 28px;
-      margin: 30px 0;
-      border-radius: 16px;
-      box-shadow: 0 15px 40px rgba(0,0,0,0.05);
-    }
+.hero-text h1{
+  font-family:"Playfair Display", serif;
+  font-size:64px;
+  letter-spacing:6px;
+  margin:0;
+}
 
-    img.spot {
-      width: 100%;
-      border-radius: 16px;
-      margin: 20px 0;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-    }
+.hero-text p{
+  margin-top:20px;
+  font-size:18px;
+  letter-spacing:2px;
+}
 
-    iframe {
-      width: 100%;
-      height: 300px;
-      border-radius: 16px;
-      margin-bottom: 50px;
-      border: 0;
-    }
+/* ===== CONTAINER ===== */
 
-    ul {
-      padding: 0;
-      list-style: none;
-    }
+.container{
+  max-width:1000px;
+  margin:auto;
+  padding:100px 30px;
+}
 
-    ul li {
-      margin: 12px 0;
-    }
+h2{
+  font-family:"Playfair Display", serif;
+  font-size:32px;
+  margin-top:120px;
+  margin-bottom:40px;
+  position:relative;
+}
 
-    ul li a {
-      text-decoration: none;
-      background: var(--accent-color);
-      padding: 12px 18px;
-      border-radius: 30px;
-      font-size: 14px;
-      color: var(--main-color);
-      display: inline-block;
-      transition: 0.2s ease;
-    }
+h2::after{
+  content:"";
+  width:60px;
+  height:2px;
+  background:var(--main);
+  position:absolute;
+  left:0;
+  bottom:-10px;
+}
 
-    ul li a:hover {
-      background: var(--main-color);
-      color: white;
-      transform: translateY(-2px);
-    }
+h3{
+  font-size:20px;
+  margin-top:60px;
+}
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 50px 0;
-      background: white;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    }
+/* ===== CARD ===== */
 
-    th, td {
-      padding: 16px;
-      text-align: center;
-    }
+.card{
+  background:var(--card);
+  padding:40px;
+  border-radius:20px;
+  box-shadow:0 20px 40px rgba(0,0,0,0.05);
+  margin:50px 0;
+}
 
-    th {
-      background: var(--accent-color);
-      font-weight: 600;
-    }
+/* ===== IMAGE ===== */
 
-    tr:not(:last-child) {
-      border-bottom: 1px solid #eee;
-    }
+.spot{
+  width:100%;
+  border-radius:20px;
+  margin:25px 0;
+  transition:0.5s;
+}
 
-    a.button {
-      display: inline-block;
-      background: var(--main-color);
-      color: white;
-      padding: 14px 24px;
-      border-radius: 40px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: 0.2s;
-    }
+.spot:hover{
+  transform:scale(1.02);
+}
 
-    a.button:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    }
+/* ===== BUTTON ===== */
 
-    footer {
-      text-align: center;
-      margin-top: 100px;
-      color: #888;
-      font-size: 13px;
-    }
+.button{
+  display:inline-block;
+  padding:14px 28px;
+  background:var(--main);
+  color:white;
+  border-radius:40px;
+  text-decoration:none;
+  margin-top:20px;
+  transition:0.3s;
+}
 
-    /* スクロールふわっと */
-    .fade {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: 0.8s ease;
-    }
+.button:hover{
+  background:#163021;
+}
 
-    .fade.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
+/* ===== COST GRID ===== */
 
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 28px;
-      }
-      iframe {
-        height: 220px;
-      }
-    }
-  </style>
+.cost-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:30px;
+  margin-top:60px;
+}
+
+.cost-item{
+  background:var(--beige);
+  padding:30px;
+  border-radius:20px;
+  text-align:center;
+}
+
+.cost-item h4{
+  margin:0;
+  font-weight:500;
+}
+
+.cost-item p{
+  font-size:22px;
+  margin-top:10px;
+  font-weight:600;
+}
+
+/* ===== FOOTER ===== */
+
+footer{
+  text-align:center;
+  margin-top:120px;
+  padding:40px;
+  font-size:13px;
+  color:#888;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media(max-width:768px){
+  .hero-text h1{
+    font-size:40px;
+  }
+  .hero-text{
+    left:7%;
+  }
+  .container{
+    padding:70px 20px;
+  }
+}
+
+</style>
 </head>
 
 <body>
 
-<div class="cover">
-  <img src="cover_awaji.JPG" alt="淡路島旅行 表紙">
+<div class="hero">
+  <img src="cover_awaji.JPG" alt="淡路島">
+  <div class="hero-text">
+    <h1>AWAJI ISLAND</h1>
+    <p>SPRING TRIP 2026<br>ITO SQUAD / 3.7 – 3.8</p>
+  </div>
 </div>
 
 <div class="container">
 
-<h1>AWAJI ISLAND TRIP</h1>
-<p style="text-align:center;">
-  <strong>伊藤軍団</strong><br>
-  2026 / 3 / 7 – 3 / 8
-</p>
-
-<div class="card fade">
+<div class="card">
   出発：名古屋 7:00（レンタカー）<br>
   宿泊：淡路シーサイドリゾート志築<br>
   人数：6人
 </div>
 
-<div class="card fade">
-  💰 割り勘管理（Walica）<br><br>
-  <a class="button" href="https://walica.jp/group/01KGCQRC2FBSX4T816A2XA2QYY" target="_blank">
-    Walicaを開く
-  </a>
+<div class="card">
+  💰 割り勘管理（Walica）<br>
+  <a class="button" href="https://walica.jp/group/01KGCQRC2FBSX4T816A2XA2QYY" target="_blank">Walicaを開く</a>
 </div>
 
-<h2>目次</h2>
-<ul>
-  <li><a href="#day1">1日目｜3月7日（金）</a></li>
-  <li><a href="#day2">2日目｜3月8日（土）</a></li>
-  <li><a href="#cost">料金概算</a></li>
-</ul>
-
-<h2 id="day1">1日目｜3月7日（金）</h2>
+<h2>Day 1</h2>
 
 <h3>ニジゲンノモリ</h3>
-<img class="spot fade" src="nijigen.JPG" alt="ニジゲンノモリ">
-<p>アニメ×自然の大型テーマパーク。写真映えスポット多数。</p>
+<img class="spot" src="nijigen.JPG">
 
 <h3>オッタマネギ（うずの丘）</h3>
-<img class="spot fade" src="ottamanegi.JPG" alt="オッタマネギ">
-<p>巨大玉ねぎオブジェで記念撮影。</p>
+<img class="spot" src="ottamanegi.JPG">
 
 <h3>タコせんべいの里</h3>
-<img class="spot fade" src="takosenbei.JPG" alt="タコせんべいの里">
-<p>無料試食＆お土産タイム。</p>
+<img class="spot" src="takosenbei.JPG">
 
-<h3>夜ご飯：居酒屋 濵</h3>
-<p>地元食材メインの落ち着いた居酒屋（1人5,000円想定）</p>
+<h2>Day 2</h2>
 
-<h2 id="day2">2日目｜3月8日（土）</h2>
+<h3>うず潮クルーズ</h3>
+<img class="spot" src="uzushio.JPG">
 
-<h3>うず潮クルーズ（13:30〜）</h3>
-<img class="spot fade" src="uzushio.JPG" alt="渦潮クルーズ">
-<p>世界最大級の渦潮を間近で体験。</p>
+<h2>Cost</h2>
 
-<h3>昼食：うずの丘 大鳴門橋記念館</h3>
-<p>名物タコランチ。</p>
-
-<h2 id="cost">料金概算（1人あたり）</h2>
-
-<table>
-  <tr>
-    <th>項目</th>
-    <th>金額</th>
-  </tr>
-  <tr>
-    <td>レンタカー</td>
-    <td>4,300円</td>
-  </tr>
-  <tr>
-    <td>ガソリン・高速代</td>
-    <td>3,000円</td>
-  </tr>
-  <tr>
-    <td>宿泊費</td>
-    <td>7,800円</td>
-  </tr>
-  <tr>
-    <td>渦潮クルーズ</td>
-    <td>3,000円</td>
-  </tr>
-  <tr>
-    <td>夜ご飯</td>
-    <td>5,000円</td>
-  </tr>
-  <tr>
-    <th>合計</th>
-    <th>約23,100円</th>
-  </tr>
-</table>
+<div class="cost-grid">
+  <div class="cost-item">
+    <h4>レンタカー</h4>
+    <p>¥4,300</p>
+  </div>
+  <div class="cost-item">
+    <h4>ガソリン・高速</h4>
+    <p>¥3,000</p>
+  </div>
+  <div class="cost-item">
+    <h4>宿泊費</h4>
+    <p>¥7,800</p>
+  </div>
+  <div class="cost-item">
+    <h4>渦潮クルーズ</h4>
+    <p>¥3,000</p>
+  </div>
+  <div class="cost-item">
+    <h4>夜ご飯</h4>
+    <p>¥5,000</p>
+  </div>
+</div>
 
 <footer>
   © 2026 Ito Squad Awaji Island Trip
 </footer>
 
 </div>
-
-<script>
-  const fades = document.querySelectorAll('.fade');
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show');
-      }
-    });
-  });
-
-  fades.forEach(el => observer.observe(el));
-</script>
 
 </body>
 </html>
