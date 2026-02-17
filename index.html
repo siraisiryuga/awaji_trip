@@ -8,6 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
 
 <style>
+
 :root{
   --main:#1F3D2B;
   --bg:#F8F6F2;
@@ -32,7 +33,6 @@ body{
 .hero{
   position:relative;
   height:85vh;
-  overflow:hidden;
 }
 
 .hero img{
@@ -53,7 +53,6 @@ body{
   bottom:15%;
   left:10%;
   color:white;
-  z-index:2;
 }
 
 .hero-text h1{
@@ -66,7 +65,6 @@ body{
 .hero-text p{
   margin-top:20px;
   font-size:18px;
-  letter-spacing:2px;
 }
 
 /* CONTAINER */
@@ -77,29 +75,6 @@ body{
   padding:100px 30px;
 }
 
-h2{
-  font-family:"Playfair Display", serif;
-  font-size:32px;
-  margin-top:120px;
-  margin-bottom:40px;
-  position:relative;
-}
-
-h2::after{
-  content:"";
-  width:60px;
-  height:2px;
-  background:var(--main);
-  position:absolute;
-  left:0;
-  bottom:-10px;
-}
-
-h3{
-  font-size:20px;
-  margin-top:60px;
-}
-
 /* CARD */
 
 .card{
@@ -107,71 +82,13 @@ h3{
   padding:40px;
   border-radius:20px;
   box-shadow:0 20px 40px rgba(0,0,0,0.05);
-  margin:50px 0;
-}
-
-/* IMAGE */
-
-.spot{
-  width:100%;
-  border-radius:20px;
-  margin:25px 0;
-  transition:0.5s;
-}
-
-.spot:hover{
-  transform:scale(1.02);
-}
-
-/* BUTTON */
-
-.button{
-  display:inline-block;
-  padding:14px 28px;
-  background:var(--main);
-  color:white;
-  border-radius:40px;
-  text-decoration:none;
-  margin-top:20px;
-  transition:0.3s;
-}
-
-.button:hover{
-  background:#163021;
-}
-
-/* COST GRID */
-
-.cost-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:30px;
-  margin-top:60px;
-}
-
-.cost-item{
-  background:var(--beige);
-  padding:30px;
-  border-radius:20px;
-  text-align:center;
-}
-
-.cost-item h4{
-  margin:0;
-  font-weight:500;
-}
-
-.cost-item p{
-  font-size:22px;
-  margin-top:10px;
-  font-weight:600;
+  margin:40px 0;
 }
 
 /* TIMELINE */
 
 .timeline{
   position:relative;
-  margin-top:30px;
 }
 
 .timeline::before{
@@ -181,17 +98,17 @@ h3{
   top:0;
   bottom:0;
   width:2px;
-  background:#e0e0e0;
+  background:#ddd;
 }
 
 .time-item{
   display:flex;
-  margin-bottom:35px;
+  margin-bottom:30px;
 }
 
 .time{
   width:90px;
-  font-weight:600;
+  font-weight:bold;
   color:var(--main);
 }
 
@@ -199,61 +116,87 @@ h3{
   padding-left:30px;
 }
 
-.content h4{
-  margin:0;
-  font-size:18px;
+/* TABLE */
+
+.schedule-table{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:20px;
 }
 
-.content p{
-  margin-top:5px;
-  color:#666;
+.schedule-table th{
+  background:var(--main);
+  color:white;
+  padding:15px;
+  text-align:left;
+}
+
+.schedule-table td{
+  padding:15px;
+  border-bottom:1px solid #eee;
+}
+
+.schedule-table tr:hover{
+  background:#f9f9f9;
+}
+
+/* IMAGE */
+
+.spot{
+  width:100%;
+  border-radius:20px;
+  margin:25px 0;
+}
+
+/* COST */
+
+.cost-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+
+.cost-item{
+  background:var(--beige);
+  padding:20px;
+  border-radius:15px;
+  text-align:center;
+}
+
+/* BUTTON */
+
+.button{
+  display:inline-block;
+  padding:12px 24px;
+  background:var(--main);
+  color:white;
+  border-radius:30px;
+  text-decoration:none;
 }
 
 /* FOOTER */
 
 footer{
   text-align:center;
-  margin-top:120px;
-  padding:40px;
-  font-size:13px;
+  margin-top:100px;
   color:#888;
 }
 
-/* RESPONSIVE */
-
-@media(max-width:768px){
-
-.hero-text h1{
-  font-size:40px;
+h2{
+  font-family:"Playfair Display", serif;
+  margin-top:100px;
 }
 
-.hero-text{
-  left:7%;
-}
-
-.container{
-  padding:70px 20px;
-}
-
-.timeline::before{
-  left:80px;
-}
-
-.time{
-  width:70px;
-}
-
-}
 </style>
 </head>
 
 <body>
 
 <div class="hero">
-<img src="cover_awaji.JPG">
+<img src="cover_awaji.jpg">
 <div class="hero-text">
 <h1>AWAJI ISLAND</h1>
-<p>SPRING TRIP 2026<br>ITO SQUAD / 3.7 – 3.8</p>
+<p>SPRING TRIP 2026<br>ITO SQUAD</p>
 </div>
 </div>
 
@@ -266,169 +209,219 @@ footer{
 </div>
 
 <div class="card">
-💰 割り勘管理（Walica）<br>
 <a class="button" href="https://walica.jp/group/01KGCQRC2FBSX4T816A2XA2QYY" target="_blank">
-Walicaを開く
+Walicaで割り勘管理
 </a>
 </div>
 
-<h2>Day 1 — Coastal Drive</h2>
+<!-- DAY 1 -->
+
+<h2>Day 1 Timeline</h2>
 
 <div class="card">
 <div class="timeline">
 
 <div class="time-item">
 <div class="time">07:00</div>
-<div class="content">
-<h4>Departure — Nagoya</h4>
-<p>レンタカーで淡路島へ出発。</p>
-</div>
+<div class="content">名古屋出発</div>
 </div>
 
 <div class="time-item">
 <div class="time">10:30</div>
-<div class="content">
-<h4>Nijigen no Mori</h4>
-<p>淡路島北部に到着。テーマパークを散策。</p>
-</div>
+<div class="content">ニジゲンノモリ到着・観光</div>
 </div>
 
 <div class="time-item">
 <div class="time">13:30</div>
-<div class="content">
-<h4>Tako Senbei no Sato</h4>
-<p>淡路名物のせんべいを楽しむ。</p>
-</div>
+<div class="content">タコせんべいの里</div>
 </div>
 
 <div class="time-item">
 <div class="time">15:30</div>
-<div class="content">
-<h4>Uzu no Oka & OTTAMANEGI</h4>
-<p>淡路島南端の絶景スポット。</p>
-</div>
+<div class="content">オッタマネギ（うずの丘）</div>
 </div>
 
 <div class="time-item">
 <div class="time">18:00</div>
-<div class="content">
-<h4>Check-in</h4>
-<p>淡路シーサイドリゾート志築に到着。</p>
-</div>
+<div class="content">ホテルチェックイン</div>
 </div>
 
 <div class="time-item">
 <div class="time">20:00</div>
-<div class="content">
-<h4>Dinner Reservation</h4>
-<p>予約済みレストランで夕食。</p>
-</div>
-</div>
-
-<div class="time-item">
-<div class="time">22:00</div>
-<div class="content">
-<h4>Free Time</h4>
-<p>自由時間。夜の淡路島を楽しむ。</p>
-</div>
+<div class="content">居酒屋で夕食</div>
 </div>
 
 </div>
 </div>
 
-<h3>ニジゲンノモリ</h3>
-<img class="spot" src="nijigen.JPG">
+<h2>Day 1 Schedule Table</h2>
 
-<h3>オッタマネギ（うずの丘）</h3>
-<img class="spot" src="ottamanegi.JPG">
+<div class="card">
 
-<h3>タコせんべいの里</h3>
-<img class="spot" src="takosenbei.JPG">
+<table class="schedule-table">
 
-<h2>Day 2 — Whirlpool Experience</h2>
+<tr>
+<th>時間</th>
+<th>内容</th>
+<th>場所</th>
+</tr>
+
+<tr>
+<td>07:00</td>
+<td>出発</td>
+<td>名古屋</td>
+</tr>
+
+<tr>
+<td>10:30</td>
+<td>観光</td>
+<td>ニジゲンノモリ</td>
+</tr>
+
+<tr>
+<td>13:30</td>
+<td>休憩・軽食</td>
+<td>タコせんべいの里</td>
+</tr>
+
+<tr>
+<td>15:30</td>
+<td>絶景スポット</td>
+<td>オッタマネギ</td>
+</tr>
+
+<tr>
+<td>18:00</td>
+<td>チェックイン</td>
+<td>ホテル</td>
+</tr>
+
+<tr>
+<td>20:00</td>
+<td>夕食</td>
+<td>居酒屋</td>
+</tr>
+
+</table>
+
+</div>
+
+<img class="spot" src="nijigen.jpg">
+<img class="spot" src="takosenbei.jpg">
+<img class="spot" src="ottamanegi.jpg">
+<img class="spot" src="izakaya.jpg">
+
+<!-- DAY 2 -->
+
+<h2>Day 2 Timeline</h2>
 
 <div class="card">
 <div class="timeline">
 
 <div class="time-item">
-<div class="time">08:30</div>
-<div class="content">
-<h4>Morning Start</h4>
-<p>チェックアウト。</p>
-</div>
+<div class="time">09:00</div>
+<div class="content">出発</div>
 </div>
 
 <div class="time-item">
 <div class="time">10:00</div>
-<div class="content">
-<h4>Uzushio Cruise</h4>
-<p>渦潮クルーズ体験。</p>
-</div>
+<div class="content">渦潮クルーズ</div>
 </div>
 
 <div class="time-item">
 <div class="time">12:00</div>
-<div class="content">
-<h4>Lunch</h4>
-<p>淡路島グルメ。</p>
-</div>
+<div class="content">昼食</div>
 </div>
 
 <div class="time-item">
 <div class="time">13:30</div>
-<div class="content">
-<h4>Return Drive</h4>
-<p>名古屋へ帰路。</p>
-</div>
+<div class="content">名古屋へ出発</div>
 </div>
 
 <div class="time-item">
 <div class="time">18:30</div>
-<div class="content">
-<h4>Arrival — Nagoya</h4>
-<p>到着予定。</p>
-</div>
+<div class="content">名古屋到着</div>
 </div>
 
 </div>
 </div>
 
-<h3>うず潮クルーズ</h3>
-<img class="spot" src="uzushio.JPG">
+<h2>Day 2 Schedule Table</h2>
+
+<div class="card">
+
+<table class="schedule-table">
+
+<tr>
+<th>時間</th>
+<th>内容</th>
+<th>場所</th>
+</tr>
+
+<tr>
+<td>09:00</td>
+<td>出発</td>
+<td>ホテル</td>
+</tr>
+
+<tr>
+<td>10:00</td>
+<td>渦潮クルーズ</td>
+<td>鳴門海峡</td>
+</tr>
+
+<tr>
+<td>12:00</td>
+<td>昼食</td>
+<td>淡路島</td>
+</tr>
+
+<tr>
+<td>13:30</td>
+<td>帰路</td>
+<td>名古屋方面</td>
+</tr>
+
+<tr>
+<td>18:30</td>
+<td>到着</td>
+<td>名古屋</td>
+</tr>
+
+</table>
+
+</div>
+
+<img class="spot" src="uzushio.jpg">
 
 <h2>Cost</h2>
 
 <div class="cost-grid">
 
 <div class="cost-item">
-<h4>レンタカー</h4>
-<p>¥4,300</p>
+レンタカー<br>¥4,300
 </div>
 
 <div class="cost-item">
-<h4>ガソリン・高速</h4>
-<p>¥3,000</p>
+ガソリン・高速<br>¥3,000
 </div>
 
 <div class="cost-item">
-<h4>宿泊費</h4>
-<p>¥7,800</p>
+宿泊<br>¥7,800
 </div>
 
 <div class="cost-item">
-<h4>渦潮クルーズ</h4>
-<p>¥3,000</p>
+クルーズ<br>¥3,000
 </div>
 
 <div class="cost-item">
-<h4>夜ご飯</h4>
-<p>¥5,000</p>
+夕食<br>¥5,000
 </div>
 
 </div>
 
 <footer>
-© 2026 Ito Squad Awaji Island Trip
+© Ito Squad Awaji Trip 2026
 </footer>
 
 </div>
