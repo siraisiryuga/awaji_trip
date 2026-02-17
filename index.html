@@ -1,16 +1,319 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>淡路島1泊2日旅行プラン｜伊藤軍団</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --main:#1F3D2B;
+  --bg:#F8F6F2;
+  --card:#FFFFFF;
+  --beige:#EFE9E2;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  font-family:"Noto Sans JP", sans-serif;
+  background:var(--bg);
+  color:#222;
+  line-height:1.9;
+}
+
+/* HERO */
+
+.hero{
+  position:relative;
+  height:85vh;
+  overflow:hidden;
+}
+
+.hero img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to bottom, rgba(0,0,0,0.35), rgba(0,0,0,0.55));
+}
+
+.hero-text{
+  position:absolute;
+  bottom:15%;
+  left:10%;
+  color:white;
+  z-index:2;
+}
+
+.hero-text h1{
+  font-family:"Playfair Display", serif;
+  font-size:64px;
+  letter-spacing:6px;
+  margin:0;
+}
+
+.hero-text p{
+  margin-top:20px;
+  font-size:18px;
+  letter-spacing:2px;
+}
+
+/* CONTAINER */
+
+.container{
+  max-width:1000px;
+  margin:auto;
+  padding:100px 30px;
+}
+
+h2{
+  font-family:"Playfair Display", serif;
+  font-size:32px;
+  margin-top:120px;
+  margin-bottom:40px;
+  position:relative;
+}
+
+h2::after{
+  content:"";
+  width:60px;
+  height:2px;
+  background:var(--main);
+  position:absolute;
+  left:0;
+  bottom:-10px;
+}
+
+h3{
+  font-size:20px;
+  margin-top:60px;
+}
+
+/* CARD */
+
+.card{
+  background:var(--card);
+  padding:40px;
+  border-radius:20px;
+  box-shadow:0 20px 40px rgba(0,0,0,0.05);
+  margin:50px 0;
+}
+
+/* IMAGE */
+
+.spot{
+  width:100%;
+  border-radius:20px;
+  margin:25px 0;
+  transition:0.5s;
+}
+
+.spot:hover{
+  transform:scale(1.02);
+}
+
+/* BUTTON */
+
+.button{
+  display:inline-block;
+  padding:14px 28px;
+  background:var(--main);
+  color:white;
+  border-radius:40px;
+  text-decoration:none;
+  margin-top:20px;
+  transition:0.3s;
+}
+
+.button:hover{
+  background:#163021;
+}
+
+/* COST GRID */
+
+.cost-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:30px;
+  margin-top:60px;
+}
+
+.cost-item{
+  background:var(--beige);
+  padding:30px;
+  border-radius:20px;
+  text-align:center;
+}
+
+.cost-item h4{
+  margin:0;
+  font-weight:500;
+}
+
+.cost-item p{
+  font-size:22px;
+  margin-top:10px;
+  font-weight:600;
+}
+
+/* TIMELINE */
+
+.timeline{
+  position:relative;
+  margin-top:30px;
+}
+
+.timeline::before{
+  content:"";
+  position:absolute;
+  left:100px;
+  top:0;
+  bottom:0;
+  width:2px;
+  background:#e0e0e0;
+}
+
+.time-item{
+  display:flex;
+  margin-bottom:35px;
+}
+
+.time{
+  width:90px;
+  font-weight:600;
+  color:var(--main);
+}
+
+.content{
+  padding-left:30px;
+}
+
+.content h4{
+  margin:0;
+  font-size:18px;
+}
+
+.content p{
+  margin-top:5px;
+  color:#666;
+}
+
+/* FOOTER */
+
+footer{
+  text-align:center;
+  margin-top:120px;
+  padding:40px;
+  font-size:13px;
+  color:#888;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.hero-text h1{
+  font-size:40px;
+}
+
+.hero-text{
+  left:7%;
+}
+
+.container{
+  padding:70px 20px;
+}
+
+.timeline::before{
+  left:80px;
+}
+
+.time{
+  width:70px;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+<img src="cover_awaji.JPG">
+<div class="hero-text">
+<h1>AWAJI ISLAND</h1>
+<p>SPRING TRIP 2026<br>ITO SQUAD / 3.7 – 3.8</p>
+</div>
+</div>
+
+<div class="container">
+
+<div class="card">
+出発：名古屋 7:00（レンタカー）<br>
+宿泊：淡路シーサイドリゾート志築<br>
+人数：6人
+</div>
+
+<div class="card">
+💰 割り勘管理（Walica）<br>
+<a class="button" href="https://walica.jp/group/01KGCQRC2FBSX4T816A2XA2QYY" target="_blank">
+Walicaを開く
+</a>
+</div>
+
+<h2>Day 1 — Coastal Drive</h2>
+
+<div class="card">
+<div class="timeline">
+
 <div class="time-item">
-<div class="time">18:00</div>
+<div class="time">07:00</div>
 <div class="content">
-<h4>Check-in</h4>
-<p>淡路シーサイドリゾート志築に到着。部屋で休憩。</p>
+<h4>Departure — Nagoya</h4>
+<p>レンタカーで淡路島へ出発。</p>
 </div>
 </div>
 
 <div class="time-item">
-<div class="time">18:30</div>
+<div class="time">10:30</div>
 <div class="content">
-<h4>Free Time</h4>
-<p>海辺の散歩、写真撮影、リラックスタイム。</p>
+<h4>Nijigen no Mori</h4>
+<p>淡路島北部に到着。テーマパークを散策。</p>
+</div>
+</div>
+
+<div class="time-item">
+<div class="time">13:30</div>
+<div class="content">
+<h4>Tako Senbei no Sato</h4>
+<p>淡路名物のせんべいを楽しむ。</p>
+</div>
+</div>
+
+<div class="time-item">
+<div class="time">15:30</div>
+<div class="content">
+<h4>Uzu no Oka & OTTAMANEGI</h4>
+<p>淡路島南端の絶景スポット。</p>
+</div>
+</div>
+
+<div class="time-item">
+<div class="time">18:00</div>
+<div class="content">
+<h4>Check-in</h4>
+<p>淡路シーサイドリゾート志築に到着。</p>
 </div>
 </div>
 
@@ -18,14 +321,117 @@
 <div class="time">20:00</div>
 <div class="content">
 <h4>Dinner Reservation</h4>
-<p>予約済みのレストランで夕食。</p>
+<p>予約済みレストランで夕食。</p>
 </div>
 </div>
 
 <div class="time-item">
 <div class="time">22:00</div>
 <div class="content">
-<h4>Night Relax</h4>
-<p>宿に戻り、自由時間。</p>
+<h4>Free Time</h4>
+<p>自由時間。夜の淡路島を楽しむ。</p>
 </div>
 </div>
+
+</div>
+</div>
+
+<h3>ニジゲンノモリ</h3>
+<img class="spot" src="nijigen.JPG">
+
+<h3>オッタマネギ（うずの丘）</h3>
+<img class="spot" src="ottamanegi.JPG">
+
+<h3>タコせんべいの里</h3>
+<img class="spot" src="takosenbei.JPG">
+
+<h2>Day 2 — Whirlpool Experience</h2>
+
+<div class="card">
+<div class="timeline">
+
+<div class="time-item">
+<div class="time">08:30</div>
+<div class="content">
+<h4>Morning Start</h4>
+<p>チェックアウト。</p>
+</div>
+</div>
+
+<div class="time-item">
+<div class="time">10:00</div>
+<div class="content">
+<h4>Uzushio Cruise</h4>
+<p>渦潮クルーズ体験。</p>
+</div>
+</div>
+
+<div class="time-item">
+<div class="time">12:00</div>
+<div class="content">
+<h4>Lunch</h4>
+<p>淡路島グルメ。</p>
+</div>
+</div>
+
+<div class="time-item">
+<div class="time">13:30</div>
+<div class="content">
+<h4>Return Drive</h4>
+<p>名古屋へ帰路。</p>
+</div>
+</div>
+
+<div class="time-item">
+<div class="time">18:30</div>
+<div class="content">
+<h4>Arrival — Nagoya</h4>
+<p>到着予定。</p>
+</div>
+</div>
+
+</div>
+</div>
+
+<h3>うず潮クルーズ</h3>
+<img class="spot" src="uzushio.JPG">
+
+<h2>Cost</h2>
+
+<div class="cost-grid">
+
+<div class="cost-item">
+<h4>レンタカー</h4>
+<p>¥4,300</p>
+</div>
+
+<div class="cost-item">
+<h4>ガソリン・高速</h4>
+<p>¥3,000</p>
+</div>
+
+<div class="cost-item">
+<h4>宿泊費</h4>
+<p>¥7,800</p>
+</div>
+
+<div class="cost-item">
+<h4>渦潮クルーズ</h4>
+<p>¥3,000</p>
+</div>
+
+<div class="cost-item">
+<h4>夜ご飯</h4>
+<p>¥5,000</p>
+</div>
+
+</div>
+
+<footer>
+© 2026 Ito Squad Awaji Island Trip
+</footer>
+
+</div>
+
+</body>
+</html>
