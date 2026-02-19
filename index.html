@@ -22,12 +22,10 @@ document.write('<meta name="cache-buster" content="'+Date.now()+'">');
 
 body{
 margin:0;
-font-family:"Noto Sans JP";
+font-family:"Noto Sans JP", sans-serif;
 background:#F8F6F2;
 color:#222;
 }
-
-/* hero */
 
 .hero{
 height:90vh;
@@ -47,15 +45,11 @@ left:10%;
 color:white;
 }
 
-/* container */
-
 .container{
 max-width:1000px;
 margin:auto;
 padding:60px 20px;
 }
-
-/* card */
 
 .card{
 background:white;
@@ -64,8 +58,6 @@ margin:40px 0;
 border-radius:15px;
 box-shadow:0 10px 30px rgba(0,0,0,0.08);
 }
-
-/* table */
 
 table{
 width:100%;
@@ -80,8 +72,6 @@ border-bottom:1px solid #eee;
 th{
 background:#f5f5f5;
 }
-
-/* photo */
 
 .photo{
 margin-top:40px;
@@ -98,6 +88,11 @@ transform:translateY(0);
 .photo img{
 width:100%;
 border-radius:12px;
+transition:0.4s;
+}
+
+.photo img:hover{
+transform:scale(1.03);
 }
 
 .photo-title{
@@ -109,8 +104,6 @@ margin-top:10px;
 .photo-desc{
 color:#666;
 }
-
-/* button */
 
 .button{
 display:inline-block;
@@ -127,6 +120,8 @@ text-decoration:none;
 
 <body>
 
+<!-- HERO -->
+
 <div class="hero">
 <img src="cover_awaji.JPG">
 <div class="hero-text">
@@ -134,7 +129,6 @@ text-decoration:none;
 <p>SPRING TRIP 2026</p>
 </div>
 </div>
-
 
 <div class="container">
 
@@ -155,11 +149,138 @@ target="_blank">
 </div>
 
 
-<!-- DAY2 洗練版 -->
+<!-- DAY1 復元版 -->
 
 <div class="card">
 
-<h2>Day 2 — Departure Day</h2>
+<h2>Day 1 — Arrival & Exploration</h2>
+
+<table>
+
+<tr>
+<th>時間</th>
+<th>内容</th>
+<th>詳細</th>
+</tr>
+
+<tr>
+<td>07:00</td>
+<td>名古屋 出発</td>
+<td>レンタカー</td>
+</tr>
+
+<tr>
+<td>10:30</td>
+<td>淡路島 到着</td>
+<td>SA休憩含む（約3.5時間）</td>
+</tr>
+
+<tr>
+<td>11:00</td>
+<td>昼食</td>
+<td>淡路牛・海鮮など淡路島グルメ</td>
+</tr>
+
+<tr>
+<td>12:30</td>
+<td>ニジゲンノモリ</td>
+<td>滞在 約2時間</td>
+</tr>
+
+<tr>
+<td>15:00</td>
+<td>オッタマネギ</td>
+<td>車で約30分移動</td>
+</tr>
+
+<tr>
+<td>16:30</td>
+<td>タコせんべいの里</td>
+<td>車で約45分移動</td>
+</tr>
+
+<tr>
+<td>18:00</td>
+<td>宿 チェックイン</td>
+<td>淡路シーサイドリゾート志築</td>
+</tr>
+
+<tr>
+<td>20:00</td>
+<td>居酒屋 濱</td>
+<td>夕食（徒歩で移動するしん）</td>
+</tr>
+
+</table>
+
+
+<div class="photo">
+
+<img src="nijigen.JPG">
+
+<div class="photo-title">
+ニジゲンノモリ
+</div>
+
+<div class="photo-desc">
+自然の中でアニメ・ゲームの世界を体験できる淡路島最大級のテーマパーク。
+</div>
+
+</div>
+
+
+<div class="photo">
+
+<img src="ottamanegi.JPG">
+
+<div class="photo-title">
+オッタマネギ
+</div>
+
+<div class="photo-desc">
+巨大玉ねぎのフォトスポット。淡路島を代表する人気観光名所。
+</div>
+
+</div>
+
+
+<div class="photo">
+
+<img src="takosenbei.JPG">
+
+<div class="photo-title">
+タコせんべいの里
+</div>
+
+<div class="photo-desc">
+無料試食が楽しめる人気スポット。淡路島のお土産購入にも最適。
+</div>
+
+</div>
+
+
+<div class="photo">
+
+<img src="izakaya.JPG">
+
+<div class="photo-title">
+居酒屋 濱
+</div>
+
+<div class="photo-desc">
+地元の新鮮な魚介と淡路島グルメを楽しめる人気居酒屋。
+</div>
+
+</div>
+
+</div>
+
+
+<!-- DAY2 洗練版維持 -->
+
+<div class="card">
+
+<h2>Day 2 — Cruise & Return</h2>
 
 <table>
 
@@ -172,43 +293,31 @@ target="_blank">
 <tr>
 <td>08:30</td>
 <td>起床・準備</td>
-<td>チェックアウト準備</td>
+<td></td>
 </tr>
 
 <tr>
 <td>09:30</td>
 <td>チェックアウト</td>
-<td>淡路シーサイドリゾート志築 出発</td>
-</tr>
-
-<tr>
-<td>10:00</td>
-<td>カフェ・休憩</td>
-<td>淡路島の海沿いカフェ</td>
+<td>出発</td>
 </tr>
 
 <tr>
 <td>11:30</td>
-<td>クルーズ場所へ移動</td>
-<td>約1時間移動</td>
+<td>クルーズへ移動</td>
+<td></td>
 </tr>
 
 <tr>
 <td>12:30</td>
-<td>受付・待機</td>
+<td>受付</td>
 <td>出発30分前</td>
 </tr>
 
 <tr>
 <td>13:30</td>
-<td>渦潮クルーズ出発</td>
-<td>確定スケジュール</td>
-</tr>
-
-<tr>
-<td>14:30</td>
-<td>終了・休憩</td>
-<td>写真・お土産</td>
+<td>渦潮クルーズ</td>
+<td>確定</td>
 </tr>
 
 <tr>
@@ -220,10 +329,11 @@ target="_blank">
 <tr>
 <td>19:00</td>
 <td>名古屋 到着</td>
-<td>交通状況による</td>
+<td></td>
 </tr>
 
 </table>
+
 
 <div class="photo">
 
@@ -234,7 +344,7 @@ target="_blank">
 </div>
 
 <div class="photo-desc">
-世界最大級の渦潮を間近で体験できる特別なクルーズ。
+世界最大級の渦潮を間近で体験できる特別な体験。
 </div>
 
 </div>
@@ -246,22 +356,14 @@ target="_blank">
 
 <script>
 
-/* スクロールアニメーション */
-
 const photos=document.querySelectorAll(".photo");
 
 const observer=new IntersectionObserver(entries=>{
-
 entries.forEach(entry=>{
-
 if(entry.isIntersecting){
-
 entry.target.classList.add("show");
-
 }
-
 });
-
 });
 
 photos.forEach(photo=>observer.observe(photo));
