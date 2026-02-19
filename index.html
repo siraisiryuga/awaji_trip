@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Awaji Island Trip 2026</title>
 
-<!-- キャッシュ強制無効化 -->
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
@@ -22,6 +22,8 @@
 --card:#ffffff;
 }
 
+/* base */
+
 body{
 margin:0;
 font-family:"Noto Sans JP", sans-serif;
@@ -29,11 +31,12 @@ background:var(--bg);
 color:#222;
 }
 
-/* HERO */
+/* hero */
 
 .hero{
 height:90vh;
 position:relative;
+overflow:hidden;
 }
 
 .hero img{
@@ -57,17 +60,13 @@ color:white;
 }
 
 .hero-text h1{
-font-family:"Playfair Display", serif;
+font-family:"Playfair Display";
 font-size:60px;
 letter-spacing:8px;
 margin:0;
 }
 
-.hero-text p{
-font-size:18px;
-}
-
-/* CONTAINER */
+/* container */
 
 .container{
 max-width:1000px;
@@ -75,17 +74,17 @@ margin:auto;
 padding:60px 20px;
 }
 
-/* CARD */
+/* card */
 
 .card{
-background:var(--card);
+background:white;
 padding:30px;
 margin:40px 0;
 border-radius:15px;
 box-shadow:0 10px 30px rgba(0,0,0,0.05);
 }
 
-/* WALICA BUTTON */
+/* button */
 
 .button{
 display:inline-block;
@@ -94,10 +93,9 @@ background:var(--accent);
 color:white;
 border-radius:30px;
 text-decoration:none;
-margin-top:15px;
 }
 
-/* TABLE */
+/* table */
 
 table{
 width:100%;
@@ -114,23 +112,42 @@ th{
 background:#f4f4f4;
 }
 
-/* IMAGE */
+/* photo */
 
 .photo{
-margin-top:30px;
+margin-top:40px;
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
+
+.photo.show{
+opacity:1;
+transform:translateY(0);
 }
 
 .photo img{
 width:100%;
 border-radius:12px;
+transition:0.5s;
+}
+
+.photo img:hover{
+transform:scale(1.03);
 }
 
 .photo-title{
+font-size:20px;
 font-weight:bold;
-margin-top:8px;
+margin-top:12px;
 }
 
-/* COST GRID */
+.photo-desc{
+color:#666;
+margin-top:5px;
+}
+
+/* cost */
 
 .cost-grid{
 display:grid;
@@ -145,13 +162,7 @@ border-radius:10px;
 text-align:center;
 }
 
-.total{
-font-size:22px;
-font-weight:bold;
-color:var(--main);
-}
-
-/* FOOTER */
+/* footer */
 
 footer{
 text-align:center;
@@ -160,6 +171,7 @@ color:#777;
 }
 
 </style>
+
 </head>
 
 <body>
@@ -174,31 +186,20 @@ color:#777;
 
 <h1>AWAJI ISLAND</h1>
 
-<p>SPRING TRIP 2026<br>
-ITO SQUAD</p>
+<p>SPRING TRIP 2026</p>
 
 </div>
+
 </div>
+
 
 <div class="container">
-
-<!-- INFO -->
-
-<div class="card">
-
-<h2>Trip Info</h2>
-
-出発：名古屋 7:00（レンタカー）<br>
-人数：6人<br>
-宿泊：淡路シーサイドリゾート志築
-
-</div>
 
 <!-- WALICA -->
 
 <div class="card">
 
-<h2>割り勘管理</h2>
+<h2>割り勘</h2>
 
 <a class="button"
 href="https://walica.jp/group/01KGCQRC2FBSX4T816A2XA2QYY"
@@ -210,201 +211,176 @@ target="_blank">
 
 </div>
 
+
 <!-- DAY1 -->
 
 <div class="card">
 
-<h2>Day 1 タイムスケジュール</h2>
+<h2>Day 1</h2>
 
 <table>
 
 <tr>
 <th>時間</th>
 <th>内容</th>
-<th>詳細</th>
 </tr>
 
-<tr>
-<td>07:00</td>
-<td>名古屋 出発</td>
-<td>レンタカー</td>
-</tr>
-
-<tr>
-<td>10:30</td>
-<td>淡路島 到着</td>
-<td>SA休憩含む</td>
-</tr>
-
-<tr>
-<td>11:00</td>
-<td>昼食</td>
-<td>淡路島グルメ</td>
-</tr>
-
-<tr>
-<td>12:30</td>
-<td>ニジゲンノモリ</td>
-<td>滞在 約2時間</td>
-</tr>
-
-<tr>
-<td>15:00</td>
-<td>オッタマネギ</td>
-<td>移動30分</td>
-</tr>
-
-<tr>
-<td>16:30</td>
-<td>タコせんべいの里</td>
-<td>移動45分</td>
-</tr>
-
-<tr>
-<td>18:00</td>
-<td>ホテル チェックイン</td>
-<td></td>
-</tr>
-
-<tr>
-<td>20:00</td>
-<td>居酒屋 濱</td>
-<td>夕食</td>
-</tr>
+<tr><td>07:00</td><td>名古屋 出発</td></tr>
+<tr><td>11:00</td><td>淡路島 昼食</td></tr>
+<tr><td>12:30</td><td>ニジゲンノモリ</td></tr>
+<tr><td>15:00</td><td>オッタマネギ</td></tr>
+<tr><td>16:30</td><td>タコせんべいの里</td></tr>
+<tr><td>20:00</td><td>居酒屋 濱</td></tr>
 
 </table>
 
 <div class="photo">
+
 <img src="nijigen.JPG">
-<div class="photo-title">ニジゲンノモリ</div>
+
+<div class="photo-title">
+ニジゲンノモリ
 </div>
 
+<div class="photo-desc">
+淡路島の人気テーマパーク。自然とアニメの世界が融合した観光スポット。
+</div>
+
+</div>
+
+
 <div class="photo">
+
 <img src="ottamanegi.JPG">
-<div class="photo-title">オッタマネギ</div>
+
+<div class="photo-title">
+オッタマネギ
 </div>
 
+<div class="photo-desc">
+巨大玉ねぎのフォトスポット。淡路島の象徴的な観光地。
+</div>
+
+</div>
+
+
 <div class="photo">
+
 <img src="takosenbei.JPG">
-<div class="photo-title">タコせんべいの里</div>
+
+<div class="photo-title">
+タコせんべいの里
 </div>
+
+<div class="photo-desc">
+試食が豊富なお土産スポット。淡路島名物のせんべいが楽しめる。
+</div>
+
+</div>
+
 
 <div class="photo">
+
 <img src="izakaya.JPG">
-<div class="photo-title">居酒屋 濱</div>
+
+<div class="photo-title">
+居酒屋 濱
+</div>
+
+<div class="photo-desc">
+淡路島の新鮮な海鮮と地元料理が楽しめる居酒屋。
 </div>
 
 </div>
+
+</div>
+
 
 <!-- DAY2 -->
 
 <div class="card">
 
-<h2>Day 2 タイムスケジュール</h2>
+<h2>Day 2</h2>
 
 <table>
 
 <tr>
 <th>時間</th>
 <th>内容</th>
-<th>詳細</th>
 </tr>
 
-<tr>
-<td>09:30</td>
-<td>ホテル出発</td>
-<td></td>
-</tr>
-
-<tr>
-<td>12:30</td>
-<td>クルーズ受付</td>
-<td>出発30分前</td>
-</tr>
-
-<tr>
-<td>13:30</td>
-<td>渦潮クルーズ</td>
-<td>確定</td>
-</tr>
-
-<tr>
-<td>15:30</td>
-<td>観光・休憩</td>
-<td></td>
-</tr>
-
-<tr>
-<td>16:30</td>
-<td>淡路島 出発</td>
-<td></td>
-</tr>
-
-<tr>
-<td>19:30</td>
-<td>名古屋 到着</td>
-<td></td>
-</tr>
+<tr><td>13:30</td><td>渦潮クルーズ</td></tr>
 
 </table>
 
 <div class="photo">
+
 <img src="uzushio.JPG">
-<div class="photo-title">渦潮クルーズ</div>
+
+<div class="photo-title">
+渦潮クルーズ
+</div>
+
+<div class="photo-desc">
+世界最大級の渦潮を間近で体験できるクルーズ。
 </div>
 
 </div>
+
+</div>
+
 
 <!-- COST -->
 
 <div class="card">
 
-<h2>料金概算（1人あたり）</h2>
+<h2>料金概算</h2>
 
 <div class="cost-grid">
 
-<div class="cost">
-レンタカー
-<br>¥4,300
-</div>
+<div class="cost">レンタカー<br>¥4,300</div>
+<div class="cost">宿泊<br>¥7,800</div>
+<div class="cost">クルーズ<br>¥3,000</div>
+<div class="cost">夕食<br>¥5,000</div>
 
-<div class="cost">
-ガソリン・高速
-<br>¥3,000
-</div>
-
-<div class="cost">
-宿泊
-<br>¥7,800
-</div>
-
-<div class="cost">
-クルーズ
-<br>¥3,000
-</div>
-
-<div class="cost">
-夕食（居酒屋 濱）
-<br>¥5,000
 </div>
 
 </div>
 
-<br>
-
-<div class="total">
-合計：約 ¥23,100 / 人
-</div>
-
-</div>
 
 <footer>
 
-© 2026 Ito Squad Awaji Trip
+© 2026 Awaji Trip
 
 </footer>
 
 </div>
+
+
+<script>
+
+/* スクロールアニメーション */
+
+const photos=document.querySelectorAll(".photo");
+
+const observer=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+}
+
+});
+
+});
+
+photos.forEach(photo=>observer.observe(photo));
+
+</script>
+
 
 </body>
 </html>
