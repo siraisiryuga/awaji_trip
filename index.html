@@ -3,71 +3,55 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Awaji Island Trip</title>
+<title>Awaji Island Trip Schedule</title>
 
 <style>
 
 body{
     margin:0;
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto;
-    background:#f5f7fa;
+    background:#f4f6f9;
     color:#333;
 }
 
-/* Cover */
 .cover{
     height:55vh;
     background:url("cover_awaji.JPG") center/cover no-repeat;
     display:flex;
     align-items:center;
     justify-content:center;
-    color:white;
 }
 
 .cover h1{
-    font-size:48px;
+    color:white;
+    font-size:46px;
     background:rgba(0,0,0,0.35);
     padding:20px 40px;
     border-radius:12px;
-    letter-spacing:2px;
 }
 
-/* Container */
 .container{
     max-width:900px;
     margin:auto;
     padding:40px 20px;
 }
 
-/* Section */
 .section{
     margin-bottom:60px;
 }
 
-/* Spot images */
-.spot{
-    width:100%;
-    border-radius:14px;
-    margin-top:15px;
-    margin-bottom:25px;
-    box-shadow:0 4px 12px rgba(0,0,0,0.15);
-}
-
-/* Table timetable */
 table{
     width:100%;
     border-collapse:collapse;
     background:white;
     border-radius:12px;
     overflow:hidden;
-    box-shadow:0 4px 10px rgba(0,0,0,0.08);
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
 }
 
 th, td{
     padding:14px;
-    text-align:left;
     border-bottom:1px solid #eee;
-    text-decoration:none; /* ←取り消し線防止 */
 }
 
 th{
@@ -79,20 +63,22 @@ tr:hover{
     background:#f0f4ff;
 }
 
-/* Headings */
 h2{
     border-left:6px solid #2d6cdf;
-    padding-left:12px;
+    padding-left:10px;
 }
 
-h3{
-    margin-top:30px;
+.spot{
+    width:100%;
+    border-radius:12px;
+    margin-top:15px;
+    margin-bottom:30px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.15);
 }
 
-.note{
-    color:#666;
-    margin-top:-10px;
-    margin-bottom:20px;
+.drive{
+    color:#2d6cdf;
+    font-weight:bold;
 }
 
 </style>
@@ -101,123 +87,162 @@ h3{
 <body>
 
 <div class="cover">
-<h1>AWAJI ISLAND TRIP</h1>
+<h1>AWAJI ISLAND ROAD TRIP</h1>
 </div>
 
 <div class="container">
 
 <div class="section">
-<h2>Day 1 — Adventure & Local Night</h2>
+<h2>Day 1 — Nagoya → Awaji Island</h2>
 
 <table>
 <tr>
 <th>Time</th>
-<th>Plan</th>
-<th>Location</th>
+<th>Schedule</th>
+<th>Drive Time</th>
 </tr>
 
 <tr>
-<td>10:00</td>
-<td>Departure</td>
-<td>Home</td>
+<td>07:00</td>
+<td>Depart Nagoya (Rental Car)</td>
+<td>-</td>
 </tr>
 
 <tr>
-<td>12:30</td>
-<td>Lunch</td>
-<td>Service Area</td>
+<td>07:00–10:45</td>
+<td class="drive">Drive to Awaji Island via Expressway</td>
+<td>3h 45m</td>
 </tr>
 
 <tr>
-<td>14:30</td>
+<td>11:00–12:00</td>
+<td>Lunch on Awaji Island</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>12:00–12:20</td>
+<td class="drive">Drive to Nijigen no Mori</td>
+<td>20m</td>
+</tr>
+
+<tr>
+<td>12:20–15:00</td>
 <td>Nijigen no Mori</td>
-<td>Awaji Island</td>
+<td>-</td>
 </tr>
 
 <tr>
-<td>16:30</td>
-<td>Ottamanegi</td>
-<td>Awaji Island</td>
+<td>15:00–16:00</td>
+<td class="drive">Drive to Ottamanegi</td>
+<td>1h</td>
 </tr>
 
 <tr>
-<td>17:30</td>
+<td>16:00–16:30</td>
+<td>Ottamanegi Photo Spot</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>16:30–17:15</td>
+<td class="drive">Drive to Tako Senbei no Sato</td>
+<td>45m</td>
+</tr>
+
+<tr>
+<td>17:15–17:45</td>
 <td>Tako Senbei no Sato</td>
-<td>Awaji Island</td>
+<td>-</td>
 </tr>
 
 <tr>
-<td>19:00</td>
-<td>Hotel Check-in / Rest</td>
-<td>Hotel</td>
+<td>17:45–18:15</td>
+<td class="drive">Drive to Hotel</td>
+<td>30m</td>
 </tr>
 
 <tr>
-<td>20:00</td>
+<td>18:15–19:30</td>
+<td>Hotel Check-in & Rest</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>19:30–20:00</td>
+<td class="drive">Drive to Izakaya</td>
+<td>30m</td>
+</tr>
+
+<tr>
+<td>20:00–22:00</td>
 <td>Dinner — Local Izakaya</td>
-<td>Awaji Island</td>
+<td>-</td>
 </tr>
 
 </table>
 
-<h3>Nijigen no Mori</h3>
 <img class="spot" src="nijigen.JPG">
-
-<h3>Ottamanegi</h3>
 <img class="spot" src="ottamanegi.JPG">
-
-<h3>Tako Senbei no Sato</h3>
 <img class="spot" src="takosenbei.JPG">
-
-<h3>Dinner — Local Izakaya</h3>
 <img class="spot" src="izakaya.JPG">
-<p class="note">Local Awaji cuisine and relaxing night.</p>
 
 </div>
 
 <div class="section">
-<h2>Day 2 — Scenic Morning & Return</h2>
+<h2>Day 2 — Uzushio Cruise & Return</h2>
 
 <table>
 <tr>
 <th>Time</th>
-<th>Plan</th>
-<th>Location</th>
+<th>Schedule</th>
+<th>Drive Time</th>
 </tr>
 
 <tr>
-<td>09:00</td>
-<td>Breakfast</td>
-<td>Hotel</td>
+<td>09:00–10:00</td>
+<td>Breakfast & Checkout</td>
+<td>-</td>
 </tr>
 
 <tr>
-<td>10:30</td>
-<td>Uzushio Cruise / Sightseeing</td>
-<td>Awaji Island</td>
+<td>11:30–12:30</td>
+<td class="drive">Drive to Fukura Port (Uzushio Cruise Port)</td>
+<td>1h</td>
 </tr>
 
 <tr>
-<td>12:30</td>
-<td>Lunch</td>
-<td>Awaji Island</td>
+<td>12:30–13:30</td>
+<td>Arrival / टिकट / Boarding Preparation</td>
+<td>-</td>
 </tr>
 
 <tr>
-<td>14:00</td>
-<td>Departure</td>
-<td>Awaji Island</td>
+<td>13:30–14:30</td>
+<td>Uzushio Cruise (Fixed Reservation)</td>
+<td>-</td>
 </tr>
 
 <tr>
-<td>17:00</td>
-<td>Arrival</td>
-<td>Home</td>
+<td>14:30–15:00</td>
+<td>Break / Souvenir</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>15:00–18:30</td>
+<td class="drive">Drive back to Nagoya</td>
+<td>3h 30m</td>
+</tr>
+
+<tr>
+<td>18:30</td>
+<td>Arrive Nagoya</td>
+<td>-</td>
 </tr>
 
 </table>
 
-<h3>Uzushio</h3>
 <img class="spot" src="uzushio.JPG">
 
 </div>
