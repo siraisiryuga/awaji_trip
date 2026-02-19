@@ -1,183 +1,277 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Awaji Island Trip Schedule</title>
+
+<title>Awaji Island Trip 2026</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
 
 <style>
 
+:root{
+--main:#1F3D2B;
+--bg:#F8F6F2;
+--card:#FFFFFF;
+--accent:#2d6cdf;
+}
+
 body{
-    margin:0;
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto;
-    background:#f4f6f9;
-    color:#333;
+margin:0;
+font-family:"Noto Sans JP", sans-serif;
+background:var(--bg);
+color:#222;
+line-height:1.8;
 }
 
-.cover{
-    height:55vh;
-    background:url("cover_awaji.JPG") center/cover no-repeat;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+/* HERO */
+
+.hero{
+height:90vh;
+position:relative;
+overflow:hidden;
 }
 
-.cover h1{
-    color:white;
-    font-size:46px;
-    background:rgba(0,0,0,0.35);
-    padding:20px 40px;
-    border-radius:12px;
+.hero img{
+width:100%;
+height:100%;
+object-fit:cover;
 }
+
+.hero::after{
+content:"";
+position:absolute;
+inset:0;
+background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.6));
+}
+
+.hero-text{
+position:absolute;
+bottom:15%;
+left:10%;
+color:white;
+}
+
+.hero-text h1{
+font-family:"Playfair Display", serif;
+font-size:64px;
+margin:0;
+letter-spacing:6px;
+}
+
+.hero-text p{
+font-size:18px;
+letter-spacing:3px;
+}
+
+/* CONTAINER */
 
 .container{
-    max-width:900px;
-    margin:auto;
-    padding:40px 20px;
+max-width:1000px;
+margin:auto;
+padding:80px 25px;
 }
 
-.section{
-    margin-bottom:60px;
+/* CARD */
+
+.card{
+background:var(--card);
+padding:35px;
+border-radius:18px;
+margin:40px 0;
+box-shadow:0 15px 35px rgba(0,0,0,0.05);
 }
+
+/* IMAGE */
+
+.spot{
+width:100%;
+border-radius:15px;
+margin-top:20px;
+}
+
+/* WALICA BUTTON */
+
+.walica-button{
+display:inline-block;
+background:var(--accent);
+color:white;
+padding:14px 26px;
+border-radius:30px;
+text-decoration:none;
+margin-top:15px;
+font-weight:bold;
+}
+
+.walica-button:hover{
+opacity:0.85;
+}
+
+/* TABLE */
 
 table{
-    width:100%;
-    border-collapse:collapse;
-    background:white;
-    border-radius:12px;
-    overflow:hidden;
-    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+width:100%;
+border-collapse:collapse;
+margin-top:20px;
+background:white;
+border-radius:10px;
+overflow:hidden;
 }
 
 th, td{
-    padding:14px;
-    border-bottom:1px solid #eee;
+padding:16px;
+text-align:left;
+border-bottom:1px solid #eee;
 }
 
 th{
-    background:#2d6cdf;
-    color:white;
+background:#f4f4f4;
 }
 
-tr:hover{
-    background:#f0f4ff;
+/* COST */
+
+.cost-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
 }
 
-h2{
-    border-left:6px solid #2d6cdf;
-    padding-left:10px;
+.cost-item{
+background:white;
+padding:20px;
+border-radius:12px;
+text-align:center;
 }
 
-.spot{
-    width:100%;
-    border-radius:12px;
-    margin-top:15px;
-    margin-bottom:30px;
-    box-shadow:0 4px 10px rgba(0,0,0,0.15);
+.cost-item p{
+font-size:20px;
+font-weight:bold;
+margin:5px 0;
 }
 
-.drive{
-    color:#2d6cdf;
-    font-weight:bold;
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:40px;
+color:#777;
 }
 
 </style>
-
 </head>
+
 <body>
 
-<div class="cover">
-<h1>AWAJI ISLAND ROAD TRIP</h1>
+<!-- HERO -->
+
+<div class="hero">
+
+<img src="cover_awaji.JPG">
+
+<div class="hero-text">
+
+<h1>AWAJI ISLAND</h1>
+
+<p>SPRING TRIP 2026<br>
+ITO SQUAD</p>
+
 </div>
+</div>
+
 
 <div class="container">
 
-<div class="section">
-<h2>Day 1 — Nagoya → Awaji Island</h2>
+<!-- INFO -->
+
+<div class="card">
+
+<h2>Trip Info</h2>
+
+出発：名古屋 7:00（レンタカー）<br>
+人数：6人<br>
+宿泊：淡路シーサイドリゾート志築
+
+</div>
+
+
+<!-- WALICA -->
+
+<div class="card">
+
+<h2>Expense Sharing</h2>
+
+<a class="walica-button"
+href="https://walica.jp/group/01KGCQRC2FBSX4T816A2XA2QYY"
+target="_blank">
+
+ワリカを開く
+
+</a>
+
+</div>
+
+
+<!-- DAY1 -->
+
+<div class="card">
+
+<h2>Day 1 Schedule</h2>
 
 <table>
+
 <tr>
-<th>Time</th>
-<th>Schedule</th>
-<th>Drive Time</th>
+<th>時間</th>
+<th>内容</th>
+<th>備考</th>
 </tr>
 
 <tr>
 <td>07:00</td>
-<td>Depart Nagoya (Rental Car)</td>
-<td>-</td>
+<td>名古屋 出発</td>
+<td>レンタカー</td>
 </tr>
 
 <tr>
-<td>07:00–10:45</td>
-<td class="drive">Drive to Awaji Island via Expressway</td>
-<td>3h 45m</td>
+<td>10:30</td>
+<td>淡路島 到着</td>
+<td>休憩込み 約3.5時間</td>
 </tr>
 
 <tr>
-<td>11:00–12:00</td>
-<td>Lunch on Awaji Island</td>
-<td>-</td>
+<td>11:00</td>
+<td>昼食（淡路島内）</td>
+<td>淡路牛・海鮮など</td>
 </tr>
 
 <tr>
-<td>12:00–12:20</td>
-<td class="drive">Drive to Nijigen no Mori</td>
-<td>20m</td>
+<td>12:30</td>
+<td>ニジゲンノモリ</td>
+<td>滞在 約2時間</td>
 </tr>
 
 <tr>
-<td>12:20–15:00</td>
-<td>Nijigen no Mori</td>
-<td>-</td>
+<td>15:00</td>
+<td>オッタマネギ</td>
+<td>写真スポット</td>
 </tr>
 
 <tr>
-<td>15:00–16:00</td>
-<td class="drive">Drive to Ottamanegi</td>
-<td>1h</td>
+<td>16:30</td>
+<td>タコせんべいの里</td>
+<td>お土産</td>
 </tr>
 
 <tr>
-<td>16:00–16:30</td>
-<td>Ottamanegi Photo Spot</td>
-<td>-</td>
+<td>18:00</td>
+<td>ホテル チェックイン</td>
+<td>休憩</td>
 </tr>
 
 <tr>
-<td>16:30–17:15</td>
-<td class="drive">Drive to Tako Senbei no Sato</td>
-<td>45m</td>
-</tr>
-
-<tr>
-<td>17:15–17:45</td>
-<td>Tako Senbei no Sato</td>
-<td>-</td>
-</tr>
-
-<tr>
-<td>17:45–18:15</td>
-<td class="drive">Drive to Hotel</td>
-<td>30m</td>
-</tr>
-
-<tr>
-<td>18:15–19:30</td>
-<td>Hotel Check-in & Rest</td>
-<td>-</td>
-</tr>
-
-<tr>
-<td>19:30–20:00</td>
-<td class="drive">Drive to Izakaya</td>
-<td>30m</td>
-</tr>
-
-<tr>
-<td>20:00–22:00</td>
-<td>Dinner — Local Izakaya</td>
-<td>-</td>
+<td>20:00</td>
+<td>居酒屋</td>
+<td>夜ご飯</td>
 </tr>
 
 </table>
@@ -189,56 +283,55 @@ h2{
 
 </div>
 
-<div class="section">
-<h2>Day 2 — Uzushio Cruise & Return</h2>
+
+<!-- DAY2 -->
+
+<div class="card">
+
+<h2>Day 2 Schedule</h2>
 
 <table>
+
 <tr>
-<th>Time</th>
-<th>Schedule</th>
-<th>Drive Time</th>
+<th>時間</th>
+<th>内容</th>
+<th>備考</th>
 </tr>
 
 <tr>
-<td>09:00–10:00</td>
-<td>Breakfast & Checkout</td>
-<td>-</td>
+<td>09:30</td>
+<td>ホテル 出発</td>
+<td></td>
 </tr>
 
 <tr>
-<td>11:30–12:30</td>
-<td class="drive">Drive to Fukura Port (Uzushio Cruise Port)</td>
-<td>1h</td>
+<td>12:30</td>
+<td>クルーズ受付</td>
+<td>30分前到着</td>
 </tr>
 
 <tr>
-<td>12:30–13:30</td>
-<td>Arrival / टिकट / Boarding Preparation</td>
-<td>-</td>
+<td>13:30</td>
+<td>渦潮クルーズ 出発</td>
+<td>確定</td>
 </tr>
 
 <tr>
-<td>13:30–14:30</td>
-<td>Uzushio Cruise (Fixed Reservation)</td>
-<td>-</td>
+<td>15:00</td>
+<td>観光・休憩</td>
+<td></td>
 </tr>
 
 <tr>
-<td>14:30–15:00</td>
-<td>Break / Souvenir</td>
-<td>-</td>
+<td>16:00</td>
+<td>淡路島 出発</td>
+<td></td>
 </tr>
 
 <tr>
-<td>15:00–18:30</td>
-<td class="drive">Drive back to Nagoya</td>
-<td>3h 30m</td>
-</tr>
-
-<tr>
-<td>18:30</td>
-<td>Arrive Nagoya</td>
-<td>-</td>
+<td>19:30</td>
+<td>名古屋 到着</td>
+<td></td>
 </tr>
 
 </table>
@@ -246,6 +339,51 @@ h2{
 <img class="spot" src="uzushio.JPG">
 
 </div>
+
+
+<!-- COST -->
+
+<div class="card">
+
+<h2>Cost</h2>
+
+<div class="cost-grid">
+
+<div class="cost-item">
+レンタカー
+<p>¥4,300</p>
+</div>
+
+<div class="cost-item">
+ガソリン・高速
+<p>¥3,000</p>
+</div>
+
+<div class="cost-item">
+宿泊
+<p>¥7,800</p>
+</div>
+
+<div class="cost-item">
+クルーズ
+<p>¥3,000</p>
+</div>
+
+<div class="cost-item">
+夜ご飯
+<p>¥5,000</p>
+</div>
+
+</div>
+
+</div>
+
+
+<footer>
+
+© 2026 Ito Squad Awaji Trip
+
+</footer>
 
 </div>
 
