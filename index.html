@@ -16,7 +16,7 @@
 document.write('<meta name="cache-buster" content="'+Date.now()+'">');
 </script>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Noto+Sans+JP:wght@400;500&family=Noto+Serif+JP:wght@600&display=swap" rel="stylesheet">
 
 <style>
 
@@ -27,67 +27,82 @@ background:#F8F6F2;
 color:#222;
 }
 
-/* 表紙（完全表示＋余白なし＋おしゃれ強化） */
+/* ===== 表紙（完全全域表示・黒余白なし・おしゃれ強化）===== */
+
 .hero{
 position:relative;
 width:100%;
 height:100vh;
 overflow:hidden;
-display:flex;
-align-items:center;
-justify-content:center;
 background:black;
 }
 
-/* ← ここが重要：containで画像全体表示 */
-.hero img{
-width:100%;
-height:100%;
-object-fit:contain;
-object-position:center center;
-background:black;
-}
-
-/* 軽い高級感オーバーレイ */
+/* 疑似要素で中央表示＋完全カバー */
 .hero::before{
 content:"";
 position:absolute;
-inset:0;
-background:linear-gradient(
-to bottom,
-rgba(0,0,0,0.15) 0%,
-rgba(0,0,0,0.25) 60%,
-rgba(0,0,0,0.45) 100%
-);
-pointer-events:none;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:url("cover_awaji.JPG") center center / cover no-repeat;
+transform:scale(1.03);
+filter:brightness(0.88);
 }
 
+/* 軽いグラデーションで高級感 */
+.hero::after{
+content:"";
+position:absolute;
+bottom:0;
+left:0;
+width:100%;
+height:40%;
+background:linear-gradient(to top, rgba(0,0,0,0.55), transparent);
+}
+
+/* テキスト */
 .hero-text{
 position:absolute;
-bottom:8%;
+bottom:10%;
 left:50%;
 transform:translateX(-50%);
 color:white;
 text-align:center;
-padding:22px 42px;
-border-radius:14px;
+padding:26px 48px;
+border-radius:16px;
+
+background:rgba(0,0,0,0.28);
 backdrop-filter:blur(10px);
-background:rgba(0,0,0,0.35);
-box-shadow:0 10px 40px rgba(0,0,0,0.4);
+
+animation:fadeUp 1.2s ease;
 }
 
 .hero-text h1{
-font-family:"Playfair Display", serif;
-font-size:48px;
-letter-spacing:4px;
+font-family:"Playfair Display","Noto Serif JP",serif;
+font-size:52px;
+letter-spacing:6px;
 margin:0;
+font-weight:600;
 }
 
 .hero-text p{
-margin-top:10px;
-font-size:16px;
-letter-spacing:2px;
-opacity:0.9;
+margin-top:12px;
+font-size:18px;
+letter-spacing:3px;
+opacity:0.95;
+}
+
+/* フェードイン */
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translate(-50%,30px);
+}
+to{
+opacity:1;
+transform:translate(-50%,0);
+}
 }
 
 /* コンテンツ */
@@ -170,7 +185,7 @@ margin-top:10px;
 background:#1f4fb5;
 }
 
-/* 料金表強調 */
+/* 料金表 */
 .total-row{
 font-weight:bold;
 font-size:20px;
@@ -184,9 +199,8 @@ background:#fafafa;
 <body>
 
 <!-- 表紙 -->
-<div class="hero">
 
-<img src="cover_awaji.JPG">
+<div class="hero">
 
 <div class="hero-text">
 <h1>Awaji Island Journey</h1>
@@ -199,6 +213,7 @@ background:#fafafa;
 <div class="container">
 
 <!-- ワリカ -->
+
 <div class="card">
 
 <h2>割り勘管理</h2>
@@ -215,6 +230,7 @@ Walicaで確認する
 
 
 <!-- DAY1 -->
+
 <div class="card">
 
 <h2>Day 1 — 北淡路エリア</h2>
@@ -306,6 +322,7 @@ Walicaで確認する
 
 
 <!-- DAY2 -->
+
 <div class="card">
 
 <h2>Day 2 — 南淡路エリア</h2>
@@ -383,60 +400,22 @@ Walicaで確認する
 </div>
 
 
-<!-- 料金概算 -->
+<!-- 料金 -->
+
 <div class="card">
 
 <h2>料金概算（1人あたり）</h2>
 
 <table>
 
-<tr>
-<th>項目</th>
-<th>金額</th>
-<th>備考</th>
-</tr>
-
-<tr>
-<td>レンタカー</td>
-<td>¥6,000</td>
-<td>2日間・保険込み</td>
-</tr>
-
-<tr>
-<td>ガソリン・高速</td>
-<td>¥5,000</td>
-<td>往復 約450km</td>
-</tr>
-
-<tr>
-<td>宿泊費</td>
-<td>¥8,000</td>
-<td>1泊</td>
-</tr>
-
-<tr>
-<td>渦潮クルーズ</td>
-<td>¥3,000</td>
-<td></td>
-</tr>
-
-<tr>
-<td>昼食（2回）</td>
-<td>¥4,000</td>
-<td></td>
-</tr>
-
-<tr>
-<td>夕食（居酒屋 濱）</td>
-<td>¥5,000</td>
-<td></td>
-</tr>
-
-<tr>
-<td>カフェ・間食・お土産</td>
-<td>¥3,000</td>
-<td></td>
-</tr>
+<tr><th>項目</th><th>金額</th><th>備考</th></tr>
+<tr><td>レンタカー</td><td>¥6,000</td><td></td></tr>
+<tr><td>ガソリン・高速</td><td>¥5,000</td><td></td></tr>
+<tr><td>宿泊費</td><td>¥8,000</td><td></td></tr>
+<tr><td>渦潮クルーズ</td><td>¥3,000</td><td></td></tr>
+<tr><td>昼食（2回）</td><td>¥4,000</td><td></td></tr>
+<tr><td>夕食</td><td>¥5,000</td><td></td></tr>
+<tr><td>その他</td><td>¥3,000</td><td></td></tr>
 
 <tr class="total-row">
 <td>合計</td>
@@ -449,7 +428,6 @@ Walicaで確認する
 </div>
 
 </div>
-
 
 <script>
 
@@ -466,7 +444,6 @@ entry.target.classList.add("show");
 photos.forEach(photo=>observer.observe(photo));
 
 </script>
-
 
 </body>
 </html>
