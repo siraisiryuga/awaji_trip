@@ -16,7 +16,7 @@
 document.write('<meta name="cache-buster" content="'+Date.now()+'">');
 </script>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Noto+Sans+JP:wght@400;500&family=Noto+Serif+JP:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
 
 <style>
 
@@ -27,85 +27,48 @@ background:#F8F6F2;
 color:#222;
 }
 
-/* ===== 表紙（完全全域表示・黒余白なし・おしゃれ強化）===== */
+
+/* ===== 表紙（黒余白ゼロ・全面表示）===== */
 
 .hero{
 position:relative;
 width:100%;
 height:100vh;
-overflow:hidden;
-background:black;
-}
-
-/* 疑似要素で中央表示＋完全カバー */
-.hero::before{
-content:"";
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
 background:url("cover_awaji.JPG") center center / cover no-repeat;
-transform:scale(1.03);
-filter:brightness(0.88);
+display:flex;
+align-items:flex-end;
+justify-content:center;
 }
 
-/* 軽いグラデーションで高級感 */
 .hero::after{
 content:"";
 position:absolute;
-bottom:0;
-left:0;
-width:100%;
-height:40%;
-background:linear-gradient(to top, rgba(0,0,0,0.55), transparent);
+inset:0;
+background:rgba(0,0,0,0.22);
 }
 
-/* テキスト */
 .hero-text{
-position:absolute;
-bottom:10%;
-left:50%;
-transform:translateX(-50%);
+position:relative;
+margin-bottom:60px;
 color:white;
 text-align:center;
-padding:26px 48px;
-border-radius:16px;
-
-background:rgba(0,0,0,0.28);
-backdrop-filter:blur(10px);
-
-animation:fadeUp 1.2s ease;
+padding:16px 32px;
+border-radius:12px;
+background:rgba(0,0,0,0.25);
+backdrop-filter:blur(6px);
 }
 
 .hero-text h1{
-font-family:"Playfair Display","Noto Serif JP",serif;
-font-size:52px;
-letter-spacing:6px;
+font-family:"Playfair Display", serif;
+font-size:40px;
+letter-spacing:4px;
 margin:0;
-font-weight:600;
+font-weight:500;
 }
 
-.hero-text p{
-margin-top:12px;
-font-size:18px;
-letter-spacing:3px;
-opacity:0.95;
-}
 
-/* フェードイン */
-@keyframes fadeUp{
-from{
-opacity:0;
-transform:translate(-50%,30px);
-}
-to{
-opacity:1;
-transform:translate(-50%,0);
-}
-}
+/* ===== コンテンツ ===== */
 
-/* コンテンツ */
 .container{
 max-width:1000px;
 margin:auto;
@@ -120,7 +83,9 @@ border-radius:16px;
 box-shadow:0 10px 30px rgba(0,0,0,0.08);
 }
 
-/* テーブル */
+
+/* ===== テーブル ===== */
+
 table{
 width:100%;
 border-collapse:collapse;
@@ -136,7 +101,9 @@ background:#f5f5f5;
 font-weight:600;
 }
 
-/* 写真 */
+
+/* ===== 写真 ===== */
+
 .photo{
 margin-top:40px;
 opacity:0;
@@ -170,7 +137,9 @@ color:#666;
 margin-top:4px;
 }
 
-/* ボタン */
+
+/* ===== ボタン ===== */
+
 .button{
 display:inline-block;
 padding:12px 25px;
@@ -185,7 +154,9 @@ margin-top:10px;
 background:#1f4fb5;
 }
 
-/* 料金表 */
+
+/* ===== 料金表 ===== */
+
 .total-row{
 font-weight:bold;
 font-size:20px;
@@ -198,21 +169,23 @@ background:#fafafa;
 
 <body>
 
-<!-- 表紙 -->
+
+<!-- ===== 表紙 ===== -->
 
 <div class="hero">
 
 <div class="hero-text">
 <h1>Awaji Island Journey</h1>
-<p>淡路島旅行記 — Spring 2026</p>
 </div>
 
 </div>
+
 
 
 <div class="container">
 
-<!-- ワリカ -->
+
+<!-- ===== ワリカ ===== -->
 
 <div class="card">
 
@@ -229,7 +202,8 @@ Walicaで確認する
 </div>
 
 
-<!-- DAY1 -->
+
+<!-- ===== DAY1 ===== -->
 
 <div class="card">
 
@@ -294,11 +268,13 @@ Walicaで確認する
 </table>
 
 
+
 <div class="photo">
 <img src="awaji_yumebutai.JPG">
 <div class="photo-title">淡路夢舞台</div>
 <div class="photo-desc">安藤忠雄設計の建築美と自然が融合した淡路島の代表的スポット。</div>
 </div>
+
 
 <div class="photo">
 <img src="nijigen.JPG">
@@ -306,11 +282,13 @@ Walicaで確認する
 <div class="photo-desc">アニメと自然が融合したテーマパーク。</div>
 </div>
 
+
 <div class="photo">
 <img src="takosenbei.JPG">
 <div class="photo-title">タコせんべいの里</div>
 <div class="photo-desc">人気のお土産スポット。</div>
 </div>
+
 
 <div class="photo">
 <img src="izakaya.JPG">
@@ -318,10 +296,12 @@ Walicaで確認する
 <div class="photo-desc">淡路島の新鮮な海鮮を楽しめる人気居酒屋。</div>
 </div>
 
+
 </div>
 
 
-<!-- DAY2 -->
+
+<!-- ===== DAY2 ===== -->
 
 <div class="card">
 
@@ -385,11 +365,14 @@ Walicaで確認する
 
 </table>
 
+
+
 <div class="photo">
 <img src="uzushio.JPG">
 <div class="photo-title">渦潮クルーズ</div>
 <div class="photo-desc">世界最大級の渦潮を体験。</div>
 </div>
+
 
 <div class="photo">
 <img src="ottamanegi.JPG">
@@ -397,10 +380,12 @@ Walicaで確認する
 <div class="photo-desc">淡路島定番フォトスポット。</div>
 </div>
 
+
 </div>
 
 
-<!-- 料金 -->
+
+<!-- ===== 料金 ===== -->
 
 <div class="card">
 
@@ -408,14 +393,53 @@ Walicaで確認する
 
 <table>
 
-<tr><th>項目</th><th>金額</th><th>備考</th></tr>
-<tr><td>レンタカー</td><td>¥6,000</td><td></td></tr>
-<tr><td>ガソリン・高速</td><td>¥5,000</td><td></td></tr>
-<tr><td>宿泊費</td><td>¥8,000</td><td></td></tr>
-<tr><td>渦潮クルーズ</td><td>¥3,000</td><td></td></tr>
-<tr><td>昼食（2回）</td><td>¥4,000</td><td></td></tr>
-<tr><td>夕食</td><td>¥5,000</td><td></td></tr>
-<tr><td>その他</td><td>¥3,000</td><td></td></tr>
+<tr>
+<th>項目</th>
+<th>金額</th>
+<th>備考</th>
+</tr>
+
+<tr>
+<td>レンタカー</td>
+<td>¥6,000</td>
+<td>2日間・保険込み</td>
+</tr>
+
+<tr>
+<td>ガソリン・高速</td>
+<td>¥5,000</td>
+<td>往復 約450km</td>
+</tr>
+
+<tr>
+<td>宿泊費</td>
+<td>¥8,000</td>
+<td>1泊</td>
+</tr>
+
+<tr>
+<td>渦潮クルーズ</td>
+<td>¥3,000</td>
+<td>確定</td>
+</tr>
+
+<tr>
+<td>昼食（2回）</td>
+<td>¥4,000</td>
+<td></td>
+</tr>
+
+<tr>
+<td>夕食（居酒屋 濱）</td>
+<td>¥5,000</td>
+<td></td>
+</tr>
+
+<tr>
+<td>カフェ・間食・お土産</td>
+<td>¥3,000</td>
+<td></td>
+</tr>
 
 <tr class="total-row">
 <td>合計</td>
@@ -427,7 +451,11 @@ Walicaで確認する
 
 </div>
 
+
+
 </div>
+
+
 
 <script>
 
@@ -444,6 +472,7 @@ entry.target.classList.add("show");
 photos.forEach(photo=>observer.observe(photo));
 
 </script>
+
 
 </body>
 </html>
