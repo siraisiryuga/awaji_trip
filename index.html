@@ -6,157 +6,259 @@
 <title>Awaji Island Trip Plan</title>
 
 <style>
+
 body {
-  font-family: 'Helvetica Neue', sans-serif;
-  margin: 0;
-  background: #f4f6f8;
-  color: #333;
-  scroll-behavior: smooth;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    background: #f0f4f8;
+    color: #333;
 }
 
-header {
-  height: 60vh;
-  background: url("hero.JPG") center/cover no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 2.5rem;
-  font-weight: bold;
-  animation: fadeIn 1.5s ease-in-out;
+/* 表紙 */
+.hero {
+    height: 65vh;
+    background: url("hero.JPG") center / cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 42px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    animation: fadeIn 1.5s ease;
 }
 
-section {
-  padding: 50px 20px;
-  max-width: 1000px;
-  margin: auto;
-  animation: slideUp 1s ease forwards;
+/* セクション */
+.section {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+    animation: slideUp 1s ease;
 }
 
 h2 {
-  border-left: 6px solid #008cff;
-  padding-left: 10px;
+    border-left: 6px solid #007aff;
+    padding-left: 12px;
 }
 
-img {
-  width: 100%;
-  border-radius: 12px;
-  margin-top: 20px;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+/* 写真 */
+.photo-block {
+    margin-top: 25px;
 }
 
-img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+.photo-block img {
+    width: 100%;
+    border-radius: 12px;
+    transition: 0.4s;
 }
 
-.photo-caption {
-  font-size: 0.9rem;
-  margin-top: 8px;
-  color: #555;
+.photo-block img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
+.caption {
+    font-size: 14px;
+    margin-top: 6px;
+    color: #555;
+}
+
+/* タイムライン */
 .timeline {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  margin-top: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 15px;
+    line-height: 1.8;
 }
 
+/* テーブル */
 table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-  background: white;
-}
-
-th, td {
-  padding: 12px;
-  border-bottom: 1px solid #ddd;
-  text-align: left;
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 th {
-  background: #008cff;
-  color: white;
+    background: #007aff;
+    color: white;
 }
 
-.total-row {
-  font-weight: bold;
-  background: #e8f4ff;
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
 }
 
+.total {
+    background: #e3f2ff;
+    font-weight: bold;
+}
+
+/* リンク */
+.link-box {
+    margin-top: 20px;
+}
+
+.link-box a {
+    color: #007aff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.link-box a:hover {
+    text-decoration: underline;
+}
+
+/* フッター */
 footer {
-  text-align: center;
-  padding: 20px;
-  background: #222;
-  color: white;
-  margin-top: 50px;
+    margin-top: 50px;
+    padding: 20px;
+    text-align: center;
+    background: #222;
+    color: white;
 }
 
+/* アニメーション */
 @keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
 
 @keyframes slideUp {
-  from {transform: translateY(30px); opacity: 0;}
-  to {transform: translateY(0); opacity: 1;}
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
+
 </style>
 </head>
 
 <body>
 
-<header>
-AWAJI ISLAND TRIP
-</header>
+<div class="hero">
+Awaji Island Trip
+</div>
 
-<section>
+<div class="section">
+
 <h2>Day1</h2>
 
 <div class="timeline">
-<p>08:00 出発</p>
-<p>10:30 淡路島到着</p>
-<p>11:00 渦潮クルーズ</p>
-<p>13:00 昼食</p>
-<p>15:00 観光スポット巡り</p>
-<p>18:30 夕食（居酒屋 濱）</p>
-<p>21:00 宿泊施設へ</p>
+
+07:00 名古屋出発（レンタカー）<br>
+↓ 約2時間30分<br><br>
+
+09:30 淡路島到着<br><br>
+
+11:30 昼食（淡路島内）<br>
+↓ 約20分移動<br><br>
+
+13:30 渦潮クルーズ<br>
+↓ 約30分移動<br><br>
+
+15:30 観光・写真スポット巡り<br><br>
+
+18:30 夕食（居酒屋 濱）<br><br>
+
+20:30 宿チェックイン（あわぞそま）
+
 </div>
 
+
+<div class="photo-block">
 <img src="uzushio.JPG">
-<div class="photo-caption">渦潮クルーズ — 鳴門海峡の迫力ある自然現象を体感</div>
+<div class="caption">
+渦潮クルーズ — 鳴門海峡の迫力ある渦潮を間近で体験
+</div>
+</div>
 
+
+<div class="photo-block">
 <img src="ham.JPG">
-<div class="photo-caption">居酒屋 濱 — 地元食材を楽しめる人気店</div>
+<div class="caption">
+居酒屋 濱 — 淡路の海鮮と地酒を楽しめる人気の居酒屋
+</div>
+</div>
 
-</section>
 
-<section>
+<div class="photo-block">
+<img src="awazosoma.JPG">
+<div class="caption">
+宿泊施設 あわぞそま — 落ち着いた雰囲気の宿
+</div>
+</div>
+
+
+</div>
+
+
+<div class="section">
+
 <h2>Day2</h2>
 
 <div class="timeline">
-<p>08:00 起床・朝食</p>
-<p>09:30 チェックアウト</p>
-<p>10:30 淡路夢舞台 観光</p>
-<p>12:30 昼食（道の駅うずしおレストラン）</p>
-<p>14:00 おっ玉葱</p>
-<p>16:00 帰路へ</p>
+
+08:00 起床<br><br>
+
+09:30 チェックアウト<br>
+↓ 約30分移動<br><br>
+
+10:30 淡路夢舞台 観光<br>
+↓ 約30分移動<br><br>
+
+12:30 昼食（道の駅うずしおレストラン）<br>
+↓ 約5分移動<br><br>
+
+14:00 おっ玉葱 写真撮影<br>
+↓ 約2時間30分<br><br>
+
+16:30 淡路島出発<br><br>
+
+19:00 名古屋到着
+
 </div>
 
+
+<div class="photo-block">
 <img src="awaji_yumebutai.JPG">
-<div class="photo-caption">淡路夢舞台 — 安藤忠雄建築と自然が融合する絶景スポット</div>
+<div class="caption">
+淡路夢舞台 — 安藤忠雄建築と自然が融合した絶景スポット
+</div>
+</div>
 
+
+<div class="photo-block">
+<img src="michinoeki.JPG">
+<div class="caption">
+道の駅うずしお — 淡路島グルメと絶景が楽しめる人気施設
+</div>
+</div>
+
+
+<div class="photo-block">
 <img src="otamanegi.JPG">
-<div class="photo-caption">おっ玉葱 — 玉ねぎオブジェで記念撮影</div>
+<div class="caption">
+おっ玉葱 — 淡路島名物の巨大玉ねぎオブジェ
+</div>
+</div>
 
-</section>
 
-<section>
+</div>
+
+
+<div class="section">
+
 <h2>料金概算表（アップグレード版）</h2>
 
 <table>
+
 <tr>
 <th>項目</th>
 <th>単価</th>
@@ -165,55 +267,81 @@ AWAJI ISLAND TRIP
 </tr>
 
 <tr>
-<td>渦潮クルーズ</td>
-<td>2,500円</td>
-<td>2名</td>
-<td>5,000円</td>
+<td>レンタカー</td>
+<td>8,000円</td>
+<td>1</td>
+<td>8,000円</td>
 </tr>
 
 <tr>
-<td>宿泊費</td>
+<td>ガソリン・高速</td>
+<td>8,000円</td>
+<td>1</td>
+<td>8,000円</td>
+</tr>
+
+<tr>
+<td>宿泊</td>
 <td>12,000円</td>
-<td>2名</td>
+<td>2</td>
 <td>24,000円</td>
+</tr>
+
+<tr>
+<td>渦潮クルーズ</td>
+<td>2,500円</td>
+<td>2</td>
+<td>5,000円</td>
 </tr>
 
 <tr>
 <td>居酒屋 濱</td>
 <td>5,000円</td>
-<td>2名</td>
+<td>2</td>
 <td>10,000円</td>
 </tr>
 
 <tr>
-<td>昼食（2回分）</td>
+<td>昼食など</td>
 <td>2,000円</td>
-<td>2名</td>
+<td>2</td>
 <td>4,000円</td>
 </tr>
 
-<tr>
-<td>ガソリン・高速代</td>
-<td colspan="2">概算</td>
-<td>8,000円</td>
+<tr class="total">
+<td colspan="3">合計</td>
+<td>59,000円</td>
 </tr>
 
-<tr class="total-row">
-<td colspan="3">合計目安</td>
-<td>51,000円</td>
+<tr class="total">
+<td colspan="3">1人あたり</td>
+<td>約29,500円</td>
 </tr>
+
 </table>
 
-<p style="margin-top:20px;">
-※1人あたり目安：約25,500円<br>
-※変動あり（飲酒量・高速料金等で前後）
-</p>
+</div>
 
-</section>
+
+<div class="section">
+
+<h2>ワリカリンク</h2>
+
+<div class="link-box">
+<a href="https://walica.jp/group/01KGCQRC2FBSX4T816A2XA2QYY" target="_blank">
+ワリカで精算を確認する
+</a>
+</div>
+
+</div>
+
 
 <footer>
-© 2026 Awaji Trip Plan
+
+Awaji Trip Plan 2026
+
 </footer>
+
 
 </body>
 </html>
