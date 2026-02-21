@@ -7,7 +7,6 @@
 
 <title>Awaji Island Journey 2026</title>
 
-<!-- キャッシュ強制回避 -->
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
@@ -20,23 +19,30 @@ document.write('<meta name="cache-buster" content="'+Date.now()+'">');
 
 <style>
 
-body{
+html,body{
 margin:0;
+padding:0;
+}
+
+body{
 font-family:"Noto Sans JP", sans-serif;
 background:#F8F6F2;
 color:#222;
 }
 
 
-/* ===== 表紙（黒余白ゼロ・全面表示）===== */
+/* ===== 表紙（全域表示・黒余白ゼロ・ぼかし削除・透明度強化）===== */
 
 .hero{
 position:relative;
 width:100%;
 height:100vh;
-background:url("cover_awaji.JPG") center center / cover no-repeat;
+background-image:url("cover_awaji.JPG");
+background-size:cover;
+background-position:center 35%;
+background-repeat:no-repeat;
 display:flex;
-align-items:flex-end;
+align-items:center;
 justify-content:center;
 }
 
@@ -44,23 +50,21 @@ justify-content:center;
 content:"";
 position:absolute;
 inset:0;
-background:rgba(0,0,0,0.22);
+background:rgba(0,0,0,0.35); /* ← 透明度強め */
 }
 
 .hero-text{
 position:relative;
-margin-bottom:60px;
 color:white;
 text-align:center;
 padding:16px 32px;
-border-radius:12px;
-background:rgba(0,0,0,0.25);
-backdrop-filter:blur(6px);
+border-radius:10px;
+background:rgba(0,0,0,0.45); /* ← 透明度強め */
 }
 
 .hero-text h1{
 font-family:"Playfair Display", serif;
-font-size:40px;
+font-size:38px;
 letter-spacing:4px;
 margin:0;
 font-weight:500;
@@ -102,7 +106,7 @@ font-weight:600;
 }
 
 
-/* ===== 写真 ===== */
+/* ===== 写真（Version14のアニメ維持）===== */
 
 .photo{
 margin-top:40px;
@@ -173,11 +177,9 @@ background:#fafafa;
 <!-- ===== 表紙 ===== -->
 
 <div class="hero">
-
 <div class="hero-text">
 <h1>Awaji Island Journey</h1>
 </div>
-
 </div>
 
 
@@ -185,7 +187,7 @@ background:#fafafa;
 <div class="container">
 
 
-<!-- ===== ワリカ ===== -->
+<!-- ===== 割り勘管理 ===== -->
 
 <div class="card">
 
@@ -217,56 +219,16 @@ Walicaで確認する
 <th>詳細</th>
 </tr>
 
-<tr>
-<td>07:00</td>
-<td>名古屋 出発</td>
-<td>レンタカー</td>
-</tr>
-
-<tr>
-<td>10:30</td>
-<td>淡路島 到着</td>
-<td>淡路IC</td>
-</tr>
-
-<tr>
-<td>11:00</td>
-<td>昼食</td>
-<td>淡路夢舞台周辺</td>
-</tr>
-
-<tr>
-<td>12:30</td>
-<td>淡路夢舞台</td>
-<td>滞在 約1.5時間</td>
-</tr>
-
-<tr>
-<td>14:15</td>
-<td>ニジゲンノモリ</td>
-<td>滞在 約2時間</td>
-</tr>
-
-<tr>
-<td>16:45</td>
-<td>洲本方面へ移動</td>
-<td>車移動</td>
-</tr>
-
-<tr>
-<td>18:00</td>
-<td>チェックイン</td>
-<td>淡路シーサイドリゾート志築</td>
-</tr>
-
-<tr>
-<td>20:00</td>
-<td>居酒屋 濱</td>
-<td>夕食</td>
-</tr>
+<tr><td>07:00</td><td>名古屋 出発</td><td>レンタカー</td></tr>
+<tr><td>10:30</td><td>淡路島 到着</td><td>淡路IC</td></tr>
+<tr><td>11:00</td><td>昼食</td><td>淡路夢舞台周辺</td></tr>
+<tr><td>12:30</td><td>淡路夢舞台</td><td>滞在 約1.5時間</td></tr>
+<tr><td>14:15</td><td>ニジゲンノモリ</td><td>滞在 約2時間</td></tr>
+<tr><td>16:45</td><td>洲本方面へ移動</td><td>車移動</td></tr>
+<tr><td>18:00</td><td>チェックイン</td><td>淡路シーサイドリゾート志築</td></tr>
+<tr><td>20:00</td><td>居酒屋 濱</td><td>夕食</td></tr>
 
 </table>
-
 
 
 <div class="photo">
@@ -275,13 +237,11 @@ Walicaで確認する
 <div class="photo-desc">安藤忠雄設計の建築美と自然が融合した淡路島の代表的スポット。</div>
 </div>
 
-
 <div class="photo">
 <img src="nijigen.JPG">
 <div class="photo-title">ニジゲンノモリ</div>
 <div class="photo-desc">アニメと自然が融合したテーマパーク。</div>
 </div>
-
 
 <div class="photo">
 <img src="takosenbei.JPG">
@@ -289,13 +249,11 @@ Walicaで確認する
 <div class="photo-desc">人気のお土産スポット。</div>
 </div>
 
-
 <div class="photo">
 <img src="izakaya.JPG">
 <div class="photo-title">居酒屋 濱</div>
 <div class="photo-desc">淡路島の新鮮な海鮮を楽しめる人気居酒屋。</div>
 </div>
-
 
 </div>
 
@@ -315,56 +273,16 @@ Walicaで確認する
 <th>詳細</th>
 </tr>
 
-<tr>
-<td>08:30</td>
-<td>起床・準備</td>
-<td></td>
-</tr>
-
-<tr>
-<td>09:30</td>
-<td>チェックアウト</td>
-<td>宿出発</td>
-</tr>
-
-<tr>
-<td>10:00</td>
-<td>長手長栄堂</td>
-<td>おやつ・お土産</td>
-</tr>
-
-<tr>
-<td>11:20</td>
-<td>道の駅うずしお</td>
-<td>昼食</td>
-</tr>
-
-<tr>
-<td>13:30</td>
-<td>渦潮クルーズ</td>
-<td>乗船</td>
-</tr>
-
-<tr>
-<td>15:00</td>
-<td>おっ玉葱</td>
-<td>観光</td>
-</tr>
-
-<tr>
-<td>15:30</td>
-<td>淡路島 出発</td>
-<td></td>
-</tr>
-
-<tr>
-<td>19:30〜20:00</td>
-<td>名古屋 到着</td>
-<td></td>
-</tr>
+<tr><td>08:30</td><td>起床・準備</td><td></td></tr>
+<tr><td>09:30</td><td>チェックアウト</td><td>宿出発</td></tr>
+<tr><td>10:00</td><td>長手長栄堂</td><td>おやつ・お土産</td></tr>
+<tr><td>11:20</td><td>道の駅うずしお</td><td>昼食</td></tr>
+<tr><td>13:30</td><td>渦潮クルーズ</td><td>乗船</td></tr>
+<tr><td>15:00</td><td>おっ玉葱</td><td>観光</td></tr>
+<tr><td>15:30</td><td>淡路島 出発</td><td></td></tr>
+<tr><td>19:30〜20:00</td><td>名古屋 到着</td><td></td></tr>
 
 </table>
-
 
 
 <div class="photo">
@@ -373,19 +291,17 @@ Walicaで確認する
 <div class="photo-desc">世界最大級の渦潮を体験。</div>
 </div>
 
-
 <div class="photo">
 <img src="ottamanegi.JPG">
 <div class="photo-title">おっ玉葱</div>
 <div class="photo-desc">淡路島定番フォトスポット。</div>
 </div>
 
-
 </div>
 
 
 
-<!-- ===== 料金 ===== -->
+<!-- ===== 料金概算 ===== -->
 
 <div class="card">
 
@@ -393,53 +309,15 @@ Walicaで確認する
 
 <table>
 
-<tr>
-<th>項目</th>
-<th>金額</th>
-<th>備考</th>
-</tr>
+<tr><th>項目</th><th>金額</th><th>備考</th></tr>
 
-<tr>
-<td>レンタカー</td>
-<td>¥6,000</td>
-<td>2日間・保険込み</td>
-</tr>
-
-<tr>
-<td>ガソリン・高速</td>
-<td>¥5,000</td>
-<td>往復 約450km</td>
-</tr>
-
-<tr>
-<td>宿泊費</td>
-<td>¥8,000</td>
-<td>1泊</td>
-</tr>
-
-<tr>
-<td>渦潮クルーズ</td>
-<td>¥3,000</td>
-<td>確定</td>
-</tr>
-
-<tr>
-<td>昼食（2回）</td>
-<td>¥4,000</td>
-<td></td>
-</tr>
-
-<tr>
-<td>夕食（居酒屋 濱）</td>
-<td>¥5,000</td>
-<td></td>
-</tr>
-
-<tr>
-<td>カフェ・間食・お土産</td>
-<td>¥3,000</td>
-<td></td>
-</tr>
+<tr><td>レンタカー</td><td>¥6,000</td><td>2日間・保険込み</td></tr>
+<tr><td>ガソリン・高速</td><td>¥5,000</td><td>往復 約450km</td></tr>
+<tr><td>宿泊費</td><td>¥8,000</td><td>1泊</td></tr>
+<tr><td>渦潮クルーズ</td><td>¥3,000</td><td>確定</td></tr>
+<tr><td>昼食（2回）</td><td>¥4,000</td><td></td></tr>
+<tr><td>夕食（居酒屋 濱）</td><td>¥5,000</td><td></td></tr>
+<tr><td>カフェ・間食・お土産</td><td>¥3,000</td><td></td></tr>
 
 <tr class="total-row">
 <td>合計</td>
