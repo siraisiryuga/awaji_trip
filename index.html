@@ -3,138 +3,154 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Awaji Island Trip Plan</title>
+
+<title>Awaji Island Trip 2026</title>
+
+<!-- 強制キャッシュ回避 -->
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<script>
+document.write('<meta name="cache-buster" content="'+Date.now()+'">');
+</script>
 
 <style>
 
-body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
-    background: #f0f4f8;
-    color: #333;
+body{
+margin:0;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans JP",sans-serif;
+background:#f4f6f8;
+color:#222;
 }
 
 /* 表紙 */
-.hero {
-    height: 65vh;
-    background: url("hero.JPG") center / cover no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 42px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    animation: fadeIn 1.5s ease;
+.hero{
+height:90vh;
+position:relative;
+overflow:hidden;
 }
 
-/* セクション */
-.section {
-    max-width: 900px;
-    margin: auto;
-    padding: 40px 20px;
-    animation: slideUp 1s ease;
+.hero img{
+width:100%;
+height:100%;
+object-fit:cover;
+animation:fadeIn 2s;
 }
 
-h2 {
-    border-left: 6px solid #007aff;
-    padding-left: 12px;
+.hero-text{
+position:absolute;
+bottom:15%;
+left:10%;
+color:white;
+font-size:42px;
+font-weight:bold;
+letter-spacing:2px;
+text-shadow:0 5px 20px rgba(0,0,0,0.4);
 }
 
-/* 写真 */
-.photo-block {
-    margin-top: 25px;
+/* コンテナ */
+.container{
+max-width:1000px;
+margin:auto;
+padding:50px 20px;
 }
 
-.photo-block img {
-    width: 100%;
-    border-radius: 12px;
-    transition: 0.4s;
-}
-
-.photo-block img:hover {
-    transform: scale(1.03);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-}
-
-.caption {
-    font-size: 14px;
-    margin-top: 6px;
-    color: #555;
-}
-
-/* タイムライン */
-.timeline {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 15px;
-    line-height: 1.8;
+/* カード */
+.card{
+background:white;
+padding:30px;
+margin:40px 0;
+border-radius:15px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+animation:slideUp 0.8s ease;
 }
 
 /* テーブル */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    background: white;
-    border-radius: 10px;
-    overflow: hidden;
+table{
+width:100%;
+border-collapse:collapse;
 }
 
-th {
-    background: #007aff;
-    color: white;
+th,td{
+padding:14px;
+border-bottom:1px solid #eee;
+text-align:left;
 }
 
-th, td {
-    padding: 12px;
-    border-bottom: 1px solid #ddd;
+th{
+background:#2d6cdf;
+color:white;
 }
 
-.total {
-    background: #e3f2ff;
-    font-weight: bold;
+.total{
+background:#eef4ff;
+font-weight:bold;
 }
 
-/* リンク */
-.link-box {
-    margin-top: 20px;
+/* 写真 */
+.photo{
+margin-top:30px;
+opacity:0;
+transform:translateY(40px);
+transition:1s;
 }
 
-.link-box a {
-    color: #007aff;
-    text-decoration: none;
-    font-weight: bold;
+.photo.show{
+opacity:1;
+transform:translateY(0);
 }
 
-.link-box a:hover {
-    text-decoration: underline;
+.photo img{
+width:100%;
+border-radius:12px;
+transition:0.4s;
 }
 
-/* フッター */
-footer {
-    margin-top: 50px;
-    padding: 20px;
-    text-align: center;
-    background: #222;
-    color: white;
+.photo img:hover{
+transform:scale(1.03);
+}
+
+.photo-title{
+font-weight:bold;
+font-size:18px;
+margin-top:10px;
+}
+
+.photo-desc{
+color:#666;
+font-size:14px;
+}
+
+/* ボタン */
+.button{
+display:inline-block;
+padding:12px 25px;
+background:#2d6cdf;
+color:white;
+border-radius:30px;
+text-decoration:none;
+transition:0.3s;
+}
+
+.button:hover{
+background:#1b4fb5;
 }
 
 /* アニメーション */
-@keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
+@keyframes fadeIn{
+from{opacity:0;}
+to{opacity:1;}
 }
 
-@keyframes slideUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+@keyframes slideUp{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 
 </style>
@@ -142,120 +158,215 @@ footer {
 
 <body>
 
+<!-- 表紙 -->
 <div class="hero">
-Awaji Island Trip
-</div>
-
-<div class="section">
-
-<h2>Day1</h2>
-
-<div class="timeline">
-
-07:00 名古屋出発（レンタカー）<br>
-↓ 約2時間30分<br><br>
-
-09:30 淡路島到着<br><br>
-
-11:30 昼食（淡路島内）<br>
-↓ 約20分移動<br><br>
-
-13:30 渦潮クルーズ<br>
-↓ 約30分移動<br><br>
-
-15:30 観光・写真スポット巡り<br><br>
-
-18:30 夕食（居酒屋 濱）<br><br>
-
-20:30 宿チェックイン（あわぞそま）
-
-</div>
-
-
-<div class="photo-block">
-<img src="uzushio.JPG">
-<div class="caption">
-渦潮クルーズ — 鳴門海峡の迫力ある渦潮を間近で体験
+<img src="cover_awaji.JPG">
+<div class="hero-text">
+AWAJI ISLAND TRIP 2026
 </div>
 </div>
 
+<div class="container">
 
-<div class="photo-block">
-<img src="ham.JPG">
-<div class="caption">
-居酒屋 濱 — 淡路の海鮮と地酒を楽しめる人気の居酒屋
+<!-- ワリカ -->
+<div class="card">
+
+<h2>割り勘管理</h2>
+
+<a class="button"
+href="https://walica.jp/group/01KGCQRC2FBSX4T816A2XA2QYY?v=20260221"
+target="_blank">
+
+ワリカを開く
+
+</a>
+
+</div>
+
+<!-- DAY1 -->
+<div class="card">
+
+<h2>Day 1 — Arrival & Exploration</h2>
+
+<table>
+
+<tr>
+<th>時間</th>
+<th>内容</th>
+<th>詳細</th>
+</tr>
+
+<tr>
+<td>07:00</td>
+<td>名古屋 出発</td>
+<td>レンタカー</td>
+</tr>
+
+<tr>
+<td>10:30</td>
+<td>淡路島 到着</td>
+<td>SA休憩含む</td>
+</tr>
+
+<tr>
+<td>11:30</td>
+<td>昼食</td>
+<td>淡路島グルメ</td>
+</tr>
+
+<tr>
+<td>13:30</td>
+<td>ニジゲンノモリ</td>
+<td>観光</td>
+</tr>
+
+<tr>
+<td>15:30</td>
+<td>オッタマネギ</td>
+<td>写真スポット</td>
+</tr>
+
+<tr>
+<td>16:30</td>
+<td>タコせんべいの里</td>
+<td>お土産</td>
+</tr>
+
+<tr>
+<td>18:30</td>
+<td>宿チェックイン</td>
+<td></td>
+</tr>
+
+<tr>
+<td>20:00</td>
+<td>居酒屋 濱</td>
+<td>夕食</td>
+</tr>
+
+</table>
+
+
+<div class="photo">
+<img src="nijigen.JPG">
+<div class="photo-title">ニジゲンノモリ</div>
+<div class="photo-desc">
+自然とアニメが融合した淡路島の人気テーマパーク
 </div>
 </div>
 
 
-<div class="photo-block">
-<img src="awazosoma.JPG">
-<div class="caption">
-宿泊施設 あわぞそま — 落ち着いた雰囲気の宿
+<div class="photo">
+<img src="ottamanegi.JPG">
+<div class="photo-title">オッタマネギ</div>
+<div class="photo-desc">
+淡路島を代表する巨大玉ねぎフォトスポット
 </div>
 </div>
 
 
+<div class="photo">
+<img src="takosenbei.JPG">
+<div class="photo-title">タコせんべいの里</div>
+<div class="photo-desc">
+無料試食が楽しめる人気のお土産スポット
+</div>
 </div>
 
 
-<div class="section">
-
-<h2>Day2</h2>
-
-<div class="timeline">
-
-08:00 起床<br><br>
-
-09:30 チェックアウト<br>
-↓ 約30分移動<br><br>
-
-10:30 淡路夢舞台 観光<br>
-↓ 約30分移動<br><br>
-
-12:30 昼食（道の駅うずしおレストラン）<br>
-↓ 約5分移動<br><br>
-
-14:00 おっ玉葱 写真撮影<br>
-↓ 約2時間30分<br><br>
-
-16:30 淡路島出発<br><br>
-
-19:00 名古屋到着
+<div class="photo">
+<img src="izakaya.JPG">
+<div class="photo-title">居酒屋 濱</div>
+<div class="photo-desc">
+淡路の海鮮を楽しめる人気居酒屋
+</div>
+</div>
 
 </div>
 
 
-<div class="photo-block">
+<!-- DAY2 -->
+<div class="card">
+
+<h2>Day 2 — Cruise & Return</h2>
+
+<table>
+
+<tr>
+<th>時間</th>
+<th>内容</th>
+<th>詳細</th>
+</tr>
+
+<tr>
+<td>08:30</td>
+<td>起床</td>
+<td></td>
+</tr>
+
+<tr>
+<td>09:30</td>
+<td>チェックアウト</td>
+<td></td>
+</tr>
+
+<tr>
+<td>10:30</td>
+<td>淡路夢舞台</td>
+<td>観光</td>
+</tr>
+
+<tr>
+<td>12:30</td>
+<td>昼食</td>
+<td>道の駅うずしお</td>
+</tr>
+
+<tr>
+<td>13:30</td>
+<td>渦潮クルーズ</td>
+<td></td>
+</tr>
+
+<tr>
+<td>15:30</td>
+<td>淡路島 出発</td>
+<td></td>
+</tr>
+
+<tr>
+<td>19:00</td>
+<td>名古屋 到着</td>
+<td></td>
+</tr>
+
+</table>
+
+
+<div class="photo">
 <img src="awaji_yumebutai.JPG">
-<div class="caption">
-淡路夢舞台 — 安藤忠雄建築と自然が融合した絶景スポット
+<div class="photo-title">淡路夢舞台</div>
+<div class="photo-desc">
+安藤忠雄建築の美しい複合施設
 </div>
 </div>
 
 
-<div class="photo-block">
-<img src="michinoeki.JPG">
-<div class="caption">
-道の駅うずしお — 淡路島グルメと絶景が楽しめる人気施設
+<div class="photo">
+<img src="uzushio.JPG">
+<div class="photo-title">渦潮クルーズ</div>
+<div class="photo-desc">
+世界最大級の渦潮を間近で体験
 </div>
 </div>
-
-
-<div class="photo-block">
-<img src="otamanegi.JPG">
-<div class="caption">
-おっ玉葱 — 淡路島名物の巨大玉ねぎオブジェ
-</div>
-</div>
-
 
 </div>
 
 
-<div class="section">
+<!-- 料金表 -->
+<div class="card">
 
-<h2>料金概算表（アップグレード版）</h2>
+<h2>料金概算表</h2>
 
 <table>
 
@@ -274,7 +385,7 @@ Awaji Island Trip
 </tr>
 
 <tr>
-<td>ガソリン・高速</td>
+<td>高速・ガソリン</td>
 <td>8,000円</td>
 <td>1</td>
 <td>8,000円</td>
@@ -288,17 +399,17 @@ Awaji Island Trip
 </tr>
 
 <tr>
-<td>渦潮クルーズ</td>
-<td>2,500円</td>
-<td>2</td>
-<td>5,000円</td>
-</tr>
-
-<tr>
 <td>居酒屋 濱</td>
 <td>5,000円</td>
 <td>2</td>
 <td>10,000円</td>
+</tr>
+
+<tr>
+<td>クルーズ</td>
+<td>2,500円</td>
+<td>2</td>
+<td>5,000円</td>
 </tr>
 
 <tr>
@@ -322,26 +433,24 @@ Awaji Island Trip
 
 </div>
 
-
-<div class="section">
-
-<h2>ワリカリンク</h2>
-
-<div class="link-box">
-<a href="https://walica.jp/group/01KGCQRC2FBSX4T816A2XA2QYY" target="_blank">
-ワリカで精算を確認する
-</a>
-</div>
-
 </div>
 
 
-<footer>
+<script>
 
-Awaji Trip Plan 2026
+const photos=document.querySelectorAll(".photo");
 
-</footer>
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
+});
+});
 
+photos.forEach(photo=>observer.observe(photo));
+
+</script>
 
 </body>
 </html>
