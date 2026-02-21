@@ -1,403 +1,219 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Awaji Island Trip 2026</title>
-
-<!-- 強制キャッシュ回避 -->
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-<meta http-equiv="Pragma" content="no-cache">
-<meta http-equiv="Expires" content="0">
-
-<script>
-document.write('<meta name="cache-buster" content="'+Date.now()+'">');
-</script>
-
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+<title>Awaji Island Trip Plan</title>
 
 <style>
-
-body{
-margin:0;
-font-family:"Noto Sans JP", sans-serif;
-background:#F8F6F2;
-color:#222;
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  margin: 0;
+  background: #f4f6f8;
+  color: #333;
+  scroll-behavior: smooth;
 }
 
-.hero{
-height:90vh;
-position:relative;
+header {
+  height: 60vh;
+  background: url("hero.JPG") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+  animation: fadeIn 1.5s ease-in-out;
 }
 
-.hero img{
-width:100%;
-height:100%;
-object-fit:cover;
+section {
+  padding: 50px 20px;
+  max-width: 1000px;
+  margin: auto;
+  animation: slideUp 1s ease forwards;
 }
 
-.hero-text{
-position:absolute;
-bottom:15%;
-left:10%;
-color:white;
+h2 {
+  border-left: 6px solid #008cff;
+  padding-left: 10px;
 }
 
-.container{
-max-width:1000px;
-margin:auto;
-padding:60px 20px;
+img {
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 20px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-.card{
-background:white;
-padding:30px;
-margin:40px 0;
-border-radius:15px;
-box-shadow:0 10px 30px rgba(0,0,0,0.08);
+img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
-table{
-width:100%;
-border-collapse:collapse;
+.photo-caption {
+  font-size: 0.9rem;
+  margin-top: 8px;
+  color: #555;
 }
 
-th,td{
-padding:16px;
-border-bottom:1px solid #eee;
+.timeline {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
 }
 
-th{
-background:#f5f5f5;
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: white;
 }
 
-.photo{
-margin-top:40px;
-opacity:0;
-transform:translateY(40px);
-transition:1s;
+th, td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
 }
 
-.photo.show{
-opacity:1;
-transform:translateY(0);
+th {
+  background: #008cff;
+  color: white;
 }
 
-.photo img{
-width:100%;
-border-radius:12px;
-transition:0.4s;
+.total-row {
+  font-weight: bold;
+  background: #e8f4ff;
 }
 
-.photo img:hover{
-transform:scale(1.03);
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #222;
+  color: white;
+  margin-top: 50px;
 }
 
-.photo-title{
-font-weight:bold;
-font-size:18px;
-margin-top:10px;
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
 
-.photo-desc{
-color:#666;
+@keyframes slideUp {
+  from {transform: translateY(30px); opacity: 0;}
+  to {transform: translateY(0); opacity: 1;}
 }
-
-.button{
-display:inline-block;
-padding:12px 25px;
-background:#2d6cdf;
-color:white;
-border-radius:30px;
-text-decoration:none;
-}
-
 </style>
-
 </head>
 
 <body>
 
-<!-- HERO -->
+<header>
+AWAJI ISLAND TRIP
+</header>
 
-<div class="hero">
-<img src="cover_awaji.JPG">
-<div class="hero-text">
-<h1>AWAJI ISLAND</h1>
-<p>SPRING TRIP 2026</p>
-</div>
-</div>
+<section>
+<h2>Day1</h2>
 
-<div class="container">
-
-<!-- WALICA -->
-
-<div class="card">
-<h2>割り勘管理</h2>
-<a class="button"
-href="https://walica.jp/group/01KGCQRC2FBSX4T816A2XA2QYY"
-target="_blank">
-ワリカを開く
-</a>
+<div class="timeline">
+<p>08:00 出発</p>
+<p>10:30 淡路島到着</p>
+<p>11:00 渦潮クルーズ</p>
+<p>13:00 昼食</p>
+<p>15:00 観光スポット巡り</p>
+<p>18:30 夕食（居酒屋 濱）</p>
+<p>21:00 宿泊施設へ</p>
 </div>
 
-<!-- DAY1 -->
-
-<div class="card">
-
-<h2>Day 1 — 北淡路エリア</h2>
-
-<table>
-
-<tr>
-<th>時間</th>
-<th>内容</th>
-<th>詳細</th>
-</tr>
-
-<tr>
-<td>07:00</td>
-<td>名古屋 出発</td>
-<td>レンタカー</td>
-</tr>
-
-<tr>
-<td>10:30</td>
-<td>淡路島 到着（淡路IC）</td>
-<td></td>
-</tr>
-
-<tr>
-<td>11:00</td>
-<td>昼食（淡路夢舞台周辺）</td>
-<td></td>
-</tr>
-
-<tr>
-<td>12:30</td>
-<td>淡路島夢舞台</td>
-<td>滞在 約1.5時間</td>
-</tr>
-
-<tr>
-<td>14:15</td>
-<td>ニジゲンノモリ</td>
-<td>滞在 約2時間</td>
-</tr>
-
-<tr>
-<td>16:45</td>
-<td>洲本方面へ移動</td>
-<td></td>
-</tr>
-
-<tr>
-<td>18:00</td>
-<td>淡路シーサイドリゾート志築 チェックイン</td>
-<td></td>
-</tr>
-
-<tr>
-<td>20:00</td>
-<td>居酒屋 濱 夕食</td>
-<td></td>
-</tr>
-
-</table>
-
-<div class="photo">
-<img src="nijigen.JPG">
-<div class="photo-title">ニジゲンノモリ</div>
-<div class="photo-desc">
-自然の中でアニメ・ゲームの世界を体験できる淡路島最大級のテーマパーク。
-</div>
-</div>
-
-</div>
-
-<!-- DAY2 -->
-
-<div class="card">
-
-<h2>Day 2 — 南淡路エリア</h2>
-
-<table>
-
-<tr>
-<th>時間</th>
-<th>内容</th>
-<th>詳細</th>
-</tr>
-
-<tr>
-<td>08:30</td>
-<td>起床・準備</td>
-<td></td>
-</tr>
-
-<tr>
-<td>09:30</td>
-<td>淡路シーサイドリゾート志築 チェックアウト</td>
-<td></td>
-</tr>
-
-<tr>
-<td>10:00</td>
-<td>長手長栄堂 堀端本店</td>
-<td>おやつ・お土産（約20分）</td>
-</tr>
-
-<tr>
-<td>10:20</td>
-<td>南あわじ方面へ移動</td>
-<td></td>
-</tr>
-
-<tr>
-<td>11:20</td>
-<td>道の駅うずしおレストラン</td>
-<td>昼食（約60分）</td>
-</tr>
-
-<tr>
-<td>12:20</td>
-<td>福良港へ移動</td>
-<td>約15分</td>
-</tr>
-
-<tr>
-<td>12:30</td>
-<td>うずしおクルーズ 受付</td>
-<td></td>
-</tr>
-
-<tr>
-<td>13:30</td>
-<td>渦潮クルーズ乗船</td>
-<td></td>
-</tr>
-
-<tr>
-<td>14:30</td>
-<td>終了</td>
-<td></td>
-</tr>
-
-<tr>
-<td>15:00</td>
-<td>おっ玉葱</td>
-<td>滞在 約30分</td>
-</tr>
-
-<tr>
-<td>15:30</td>
-<td>淡路島 出発</td>
-<td></td>
-</tr>
-
-<tr>
-<td>19:30〜20:00</td>
-<td>名古屋 到着</td>
-<td></td>
-</tr>
-
-</table>
-
-<div class="photo">
 <img src="uzushio.JPG">
-<div class="photo-title">渦潮クルーズ</div>
-<div class="photo-desc">
-世界最大級の渦潮を間近で体験できる特別な体験。
+<div class="photo-caption">渦潮クルーズ — 鳴門海峡の迫力ある自然現象を体感</div>
+
+<img src="ham.JPG">
+<div class="photo-caption">居酒屋 濱 — 地元食材を楽しめる人気店</div>
+
+</section>
+
+<section>
+<h2>Day2</h2>
+
+<div class="timeline">
+<p>08:00 起床・朝食</p>
+<p>09:30 チェックアウト</p>
+<p>10:30 淡路夢舞台 観光</p>
+<p>12:30 昼食（道の駅うずしおレストラン）</p>
+<p>14:00 おっ玉葱</p>
+<p>16:00 帰路へ</p>
 </div>
-</div>
 
-</div>
+<img src="awaji_yumebutai.JPG">
+<div class="photo-caption">淡路夢舞台 — 安藤忠雄建築と自然が融合する絶景スポット</div>
 
-<!-- COST ESTIMATE -->
+<img src="otamanegi.JPG">
+<div class="photo-caption">おっ玉葱 — 玉ねぎオブジェで記念撮影</div>
 
-<div class="card">
+</section>
 
-<h2>Cost Estimate — 概算費用（1人あたり）</h2>
+<section>
+<h2>料金概算表（アップグレード版）</h2>
 
 <table>
-
 <tr>
 <th>項目</th>
-<th>金額</th>
-<th>備考</th>
-</tr>
-
-<tr>
-<td>レンタカー</td>
-<td>¥4,300</td>
-<td>2日間・6人割り</td>
-</tr>
-
-<tr>
-<td>ガソリン・高速代</td>
-<td>¥3,000</td>
-<td>往復 約450km</td>
-</tr>
-
-<tr>
-<td>宿泊費</td>
-<td>¥7,800</td>
-<td>淡路シーサイドリゾート志築</td>
+<th>単価</th>
+<th>人数</th>
+<th>小計</th>
 </tr>
 
 <tr>
 <td>渦潮クルーズ</td>
-<td>¥3,000</td>
-<td>確定</td>
+<td>2,500円</td>
+<td>2名</td>
+<td>5,000円</td>
 </tr>
 
 <tr>
-<td>夕食（居酒屋 濱）</td>
-<td>¥5,000</td>
-<td>概算</td>
+<td>宿泊費</td>
+<td>12,000円</td>
+<td>2名</td>
+<td>24,000円</td>
 </tr>
 
 <tr>
-<td>昼食・その他</td>
-<td>¥2,000</td>
-<td>個人差あり</td>
+<td>居酒屋 濱</td>
+<td>5,000円</td>
+<td>2名</td>
+<td>10,000円</td>
 </tr>
 
-<tr style="font-weight:bold; font-size:18px;">
-<td>合計</td>
-<td>¥25,100</td>
-<td>目安</td>
+<tr>
+<td>昼食（2回分）</td>
+<td>2,000円</td>
+<td>2名</td>
+<td>4,000円</td>
 </tr>
 
+<tr>
+<td>ガソリン・高速代</td>
+<td colspan="2">概算</td>
+<td>8,000円</td>
+</tr>
+
+<tr class="total-row">
+<td colspan="3">合計目安</td>
+<td>51,000円</td>
+</tr>
 </table>
 
-<p style="margin-top:15px; color:#666;">
-※実際の費用はWalicaで管理されます。
+<p style="margin-top:20px;">
+※1人あたり目安：約25,500円<br>
+※変動あり（飲酒量・高速料金等で前後）
 </p>
 
-<a class="button"
-href="https://walica.jp/group/01KGCQRC2FBSX4T816A2XA2QYY"
-target="_blank">
-ワリカで確認する
-</a>
+</section>
 
-</div>
-
-</div>
-
-<script>
-const photos=document.querySelectorAll(".photo");
-const observer=new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.classList.add("show");
-}
-});
-});
-photos.forEach(photo=>observer.observe(photo));
-</script>
+<footer>
+© 2026 Awaji Trip Plan
+</footer>
 
 </body>
 </html>
