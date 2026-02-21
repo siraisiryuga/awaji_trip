@@ -30,28 +30,27 @@ body{
   color:#222;
 }
 
-
-/* ===== 表紙（ヴァージョン1風 + タイトル下寄せ）===== */
+/* ===== 表紙（タイトル下寄せ）===== */
 
 .hero{
   position:relative;
   width:100%;
-  height:100vh;           
+  height:100vh;
   background-image:url("cover_awaji.JPG");
-  background-size:cover;  
-  background-position:center top; 
+  background-size:cover;
+  background-position:center top;
   background-repeat:no-repeat;
   display:flex;
-  align-items:flex-end;   /* 下寄せ */
+  align-items:flex-end;   /* タイトルを下寄せ */
   justify-content:center;
-  padding-bottom:80px;    /* 下からの余白 */
+  padding-bottom:60px;    /* 下からの余白 */
 }
 
 .hero::after{
   content:"";
   position:absolute;
   inset:0;
-  background:rgba(0,0,0,0.2); 
+  background:rgba(0,0,0,0.2);
 }
 
 .hero-text{
@@ -69,7 +68,6 @@ body{
   font-weight:500;
 }
 
-
 /* ===== コンテンツ ===== */
 
 .container{
@@ -85,7 +83,6 @@ body{
   border-radius:16px;
   box-shadow:0 10px 30px rgba(0,0,0,0.08);
 }
-
 
 /* ===== テーブル ===== */
 
@@ -104,8 +101,7 @@ th{
   font-weight:600;
 }
 
-
-/* ===== 写真（Version14のアニメ維持）===== */
+/* ===== 写真（Version14アニメ維持）===== */
 
 .photo{
   margin-top:40px;
@@ -140,7 +136,6 @@ th{
   margin-top:4px;
 }
 
-
 /* ===== ボタン ===== */
 
 .button{
@@ -157,7 +152,6 @@ th{
   background:#1f4fb5;
 }
 
-
 /* ===== 料金表 ===== */
 
 .total-row{
@@ -172,48 +166,30 @@ th{
 
 <body>
 
-
 <!-- ===== 表紙 ===== -->
-
 <div class="hero">
   <div class="hero-text">
     <h1>Awaji Island Journey</h1>
   </div>
 </div>
 
-
-
 <div class="container">
 
-
 <!-- ===== 割り勘管理 ===== -->
-
 <div class="card">
-
   <h2>割り勘管理</h2>
-
   <a class="button"
      href="https://walica.jp/group/01KGCQRC2FBSX4T816A2XA2QYY"
      target="_blank">
     Walicaで確認する
   </a>
-
 </div>
 
-
-
 <!-- ===== DAY1 ===== -->
-
 <div class="card">
-
   <h2>Day 1 — 北淡路エリア</h2>
-
   <table>
-    <tr>
-      <th>時間</th>
-      <th>内容</th>
-      <th>詳細</th>
-    </tr>
+    <tr><th>時間</th><th>内容</th><th>詳細</th></tr>
     <tr><td>07:00</td><td>名古屋 出発</td><td>レンタカー</td></tr>
     <tr><td>10:30</td><td>淡路島 到着</td><td>淡路IC</td></tr>
     <tr><td>11:00</td><td>昼食</td><td>淡路夢舞台周辺</td></tr>
@@ -223,7 +199,6 @@ th{
     <tr><td>18:00</td><td>チェックイン</td><td>淡路シーサイドリゾート志築</td></tr>
     <tr><td>20:00</td><td>居酒屋 濱</td><td>夕食</td></tr>
   </table>
-
 
   <div class="photo">
     <img src="awaji_yumebutai.JPG">
@@ -248,23 +223,13 @@ th{
     <div class="photo-title">居酒屋 濱</div>
     <div class="photo-desc">淡路島の新鮮な海鮮を楽しめる人気居酒屋。</div>
   </div>
-
 </div>
 
-
-
 <!-- ===== DAY2 ===== -->
-
 <div class="card">
-
   <h2>Day 2 — 南淡路エリア</h2>
-
   <table>
-    <tr>
-      <th>時間</th>
-      <th>内容</th>
-      <th>詳細</th>
-    </tr>
+    <tr><th>時間</th><th>内容</th><th>詳細</th></tr>
     <tr><td>08:30</td><td>起床・準備</td><td></td></tr>
     <tr><td>09:30</td><td>チェックアウト</td><td>宿出発</td></tr>
     <tr><td>10:00</td><td>長手長栄堂</td><td>おやつ・お土産</td></tr>
@@ -274,7 +239,6 @@ th{
     <tr><td>15:30</td><td>淡路島 出発</td><td></td></tr>
     <tr><td>19:30〜20:00</td><td>名古屋 到着</td><td></td></tr>
   </table>
-
 
   <div class="photo">
     <img src="uzushio.JPG">
@@ -287,17 +251,11 @@ th{
     <div class="photo-title">おっ玉葱</div>
     <div class="photo-desc">淡路島定番フォトスポット。</div>
   </div>
-
 </div>
 
-
-
 <!-- ===== 料金概算 ===== -->
-
 <div class="card">
-
   <h2>料金概算（1人あたり）</h2>
-
   <table>
     <tr><th>項目</th><th>金額</th><th>備考</th></tr>
     <tr><td>レンタカー</td><td>¥6,000</td><td>2日間・保険込み</td></tr>
@@ -313,31 +271,21 @@ th{
       <td>概算</td>
     </tr>
   </table>
-
 </div>
 
-
-
 </div>
-
-
 
 <script>
-
 const photos=document.querySelectorAll(".photo");
-
 const observer=new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.classList.add("show");
-}
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+    }
+  });
 });
-});
-
 photos.forEach(photo=>observer.observe(photo));
-
 </script>
-
 
 </body>
 </html>
