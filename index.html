@@ -1,441 +1,161 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Awaji Island Trip 2026</title>
-
-<!-- 強制キャッシュ回避 -->
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-<meta http-equiv="Pragma" content="no-cache">
-<meta http-equiv="Expires" content="0">
-
-<script>
-document.write('<meta name="cache-buster" content="'+Date.now()+'">');
-</script>
-
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+<title>Awaji Trip Plan</title>
 
 <style>
-
 body{
-margin:0;
-font-family:"Noto Sans JP", sans-serif;
-background:#F8F6F2;
-color:#222;
+  margin:0;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto;
+  background:#f4f6f8;
+  line-height:1.6;
 }
 
-/* HERO 最適化 */
+/* ===== 表紙 ===== */
 .hero{
-height:92vh;
-min-height:500px;
-max-height:900px;
-position:relative;
-overflow:hidden;
+  position:relative;
+  height:100vh;
+  background:url("cover_awaji.JPG") center center no-repeat;
+  background-size:contain;   /* ← 切れない設定 */
+  background-color:#000;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  text-align:center;
 }
 
-.hero img{
-width:100%;
-height:100%;
-object-fit:cover;
-object-position:center;
-filter:brightness(0.85);
+.hero h1{
+  font-size:40px;
+  background:rgba(0,0,0,0.5);
+  padding:20px 40px;
+  border-radius:10px;
 }
 
-.hero-text{
-position:absolute;
-bottom:15%;
-left:8%;
-color:white;
-text-shadow:0 4px 20px rgba(0,0,0,0.5);
+/* ===== セクション ===== */
+.section{
+  padding:60px 20px;
+  max-width:1000px;
+  margin:auto;
 }
 
-.hero-text h1{
-font-family:"Playfair Display", serif;
-font-size:64px;
-margin:0;
-letter-spacing:4px;
-}
-
-.hero-text p{
-font-size:20px;
-margin-top:10px;
-}
-
-.container{
-max-width:1000px;
-margin:auto;
-padding:60px 20px;
+.section h2{
+  border-bottom:3px solid #ddd;
+  padding-bottom:10px;
+  margin-bottom:30px;
 }
 
 .card{
-background:white;
-padding:35px;
-margin:40px 0;
-border-radius:16px;
-box-shadow:0 10px 30px rgba(0,0,0,0.08);
+  background:#fff;
+  padding:20px;
+  margin-bottom:30px;
+  border-radius:12px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.08);
 }
 
-/* table */
+.card img{
+  width:100%;
+  border-radius:10px;
+  margin-top:15px;
+}
+
+/* ===== 料金表 ===== */
 table{
-width:100%;
-border-collapse:collapse;
+  width:100%;
+  border-collapse:collapse;
+  margin-top:20px;
 }
 
 th,td{
-padding:16px;
-border-bottom:1px solid #eee;
-text-align:left;
+  padding:12px;
+  border-bottom:1px solid #ddd;
+  text-align:left;
 }
 
 th{
-background:#f5f5f5;
+  background:#f0f0f0;
 }
 
-/* photo animation */
-.photo{
-margin-top:40px;
-opacity:0;
-transform:translateY(40px);
-transition:1s;
+.total{
+  font-weight:bold;
+  font-size:18px;
 }
-
-.photo.show{
-opacity:1;
-transform:translateY(0);
-}
-
-.photo img{
-width:100%;
-border-radius:14px;
-transition:0.4s;
-}
-
-.photo img:hover{
-transform:scale(1.03);
-}
-
-.photo-title{
-font-weight:bold;
-font-size:18px;
-margin-top:10px;
-}
-
-.photo-desc{
-color:#666;
-}
-
-.button{
-display:inline-block;
-padding:12px 26px;
-background:#2d6cdf;
-color:white;
-border-radius:30px;
-text-decoration:none;
-margin-top:15px;
-}
-
-.button:hover{
-background:#1f4fb5;
-}
-
-/* responsive */
-@media(max-width:768px){
-
-.hero-text h1{
-font-size:42px;
-}
-
-.hero-text p{
-font-size:16px;
-}
-
-}
-
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
+<!-- 表紙 -->
 <div class="hero">
-<img src="cover_awaji.JPG?v=4">
-<div class="hero-text">
-<h1>AWAJI ISLAND</h1>
-<p>SPRING TRIP 2026</p>
-</div>
+  <h1>淡路島 1泊2日プラン</h1>
 </div>
 
-<div class="container">
+<!-- Day1 -->
+<div class="section">
+<h2>Day1</h2>
 
-<!-- WALICA -->
 <div class="card">
+<h3>淡路夢舞台</h3>
+<p>海沿いの絶景建築スポットを散策。</p>
+<img src="awaji_yumebutai.JPG">
+</div>
 
-<h2>割り勘管理</h2>
+<div class="card">
+<h3>二次元の森</h3>
+<p>アニメ×自然体験。</p>
+<img src="nijigen.JPG">
+</div>
 
-<a class="button"
-href="https://walica.jp/group/01KGCQRC2FBSX4T816A2XA2QYY?v=4"
-target="_blank">
+<div class="card">
+<h3>たこせんべいの里</h3>
+<p>試食し放題スポット。</p>
+<img src="takosenbei.JPG">
+</div>
 
-ワリカを開く
-
-</a>
+<div class="card">
+<h3>居酒屋</h3>
+<p>夜は海鮮中心に。</p>
+<img src="izakaya.JPG">
+</div>
 
 </div>
 
+<!-- Day2 -->
+<div class="section">
+<h2>Day2</h2>
 
-<!-- DAY1 -->
 <div class="card">
+<h3>渦潮クルーズ</h3>
+<p>迫力の鳴門海峡体験。</p>
+<img src="uzushio.JPG">
+</div>
 
-<h2>Day 1 — 北淡路エリア</h2>
+<div class="card">
+<h3>道の駅うずしおレストラン</h3>
+<p>昼はがっつり淡路牛バーガー。</p>
+<img src="ottamanegi.JPG">
+</div>
+
+</div>
+
+<!-- 料金概算 -->
+<div class="section">
+<h2>料金概算（1人あたり目安）</h2>
 
 <table>
-
-<tr>
-<th>時間</th>
-<th>内容</th>
-<th>詳細</th>
-</tr>
-
-<tr>
-<td>07:00</td>
-<td>名古屋 出発</td>
-<td>レンタカー</td>
-</tr>
-
-<tr>
-<td>10:30</td>
-<td>淡路島 到着</td>
-<td>淡路IC</td>
-</tr>
-
-<tr>
-<td>11:00</td>
-<td>昼食</td>
-<td>淡路夢舞台周辺</td>
-</tr>
-
-<tr>
-<td>12:30</td>
-<td>淡路夢舞台</td>
-<td>滞在 約1.5時間</td>
-</tr>
-
-<tr>
-<td>14:15</td>
-<td>ニジゲンノモリ</td>
-<td>滞在 約2時間</td>
-</tr>
-
-<tr>
-<td>16:45</td>
-<td>洲本方面へ移動</td>
-<td></td>
-</tr>
-
-<tr>
-<td>18:00</td>
-<td>宿 チェックイン</td>
-<td>淡路シーサイドリゾート志築</td>
-</tr>
-
-<tr>
-<td>20:00</td>
-<td>居酒屋 濱</td>
-<td>夕食</td>
-</tr>
-
-</table>
-
-<div class="photo">
-<img src="awaji_yumebutai.JPG?v=4">
-<div class="photo-title">淡路夢舞台</div>
-<div class="photo-desc">建築と自然が融合した淡路島を代表する美しいランドスケープ。</div>
-</div>
-
-<div class="photo">
-<img src="nijigen.JPG?v=4">
-<div class="photo-title">ニジゲンノモリ</div>
-<div class="photo-desc">アニメ・ゲームの世界を体験できる人気テーマパーク。</div>
-</div>
-
-<div class="photo">
-<img src="izakaya.JPG?v=4">
-<div class="photo-title">居酒屋 濱</div>
-<div class="photo-desc">地元の海鮮と淡路島グルメを楽しめる名店。</div>
-</div>
-
-</div>
-
-
-<!-- DAY2 -->
-<div class="card">
-
-<h2>Day 2 — 南淡路エリア</h2>
-
-<table>
-
-<tr>
-<th>時間</th>
-<th>内容</th>
-<th>詳細</th>
-</tr>
-
-<tr>
-<td>08:30</td>
-<td>起床・準備</td>
-<td></td>
-</tr>
-
-<tr>
-<td>09:30</td>
-<td>チェックアウト</td>
-<td></td>
-</tr>
-
-<tr>
-<td>10:00</td>
-<td>長手長栄堂 堀端本店</td>
-<td>おやつ・お土産</td>
-</tr>
-
-<tr>
-<td>11:20</td>
-<td>道の駅うずしおレストラン</td>
-<td>昼食</td>
-</tr>
-
-<tr>
-<td>12:30</td>
-<td>うずしおクルーズ受付</td>
-<td></td>
-</tr>
-
-<tr>
-<td>13:30</td>
-<td>渦潮クルーズ</td>
-<td>乗船</td>
-</tr>
-
-<tr>
-<td>15:00</td>
-<td>おっ玉葱</td>
-<td>観光</td>
-</tr>
-
-<tr>
-<td>15:30</td>
-<td>淡路島 出発</td>
-<td></td>
-</tr>
-
-<tr>
-<td>19:30〜20:00</td>
-<td>名古屋 到着</td>
-<td></td>
-</tr>
-
-</table>
-
-<div class="photo">
-<img src="uzushio.JPG?v=4">
-<div class="photo-title">渦潮クルーズ</div>
-<div class="photo-desc">世界最大級の渦潮を間近で体験できる特別なクルーズ。</div>
-</div>
-
-<div class="photo">
-<img src="ottamanegi.JPG?v=4">
-<div class="photo-title">おっ玉葱</div>
-<div class="photo-desc">淡路島を象徴する巨大玉ねぎフォトスポット。</div>
-</div>
-
-<div class="photo">
-<img src="takosenbei.JPG?v=4">
-<div class="photo-title">タコせんべいの里</div>
-<div class="photo-desc">人気のお土産スポット。</div>
-</div>
-
-</div>
-
-
-<!-- COST -->
-<div class="card">
-
-<h2>料金概算（1人あたり）</h2>
-
-<table>
-
-<tr>
-<th>項目</th>
-<th>金額</th>
-<th>備考</th>
-</tr>
-
-<tr>
-<td>レンタカー</td>
-<td>¥4,300</td>
-<td>6人割り</td>
-</tr>
-
-<tr>
-<td>高速・ガソリン</td>
-<td>¥3,000</td>
-<td></td>
-</tr>
-
-<tr>
-<td>宿泊</td>
-<td>¥7,800</td>
-<td></td>
-</tr>
-
-<tr>
-<td>渦潮クルーズ</td>
-<td>¥3,000</td>
-<td></td>
-</tr>
-
-<tr>
-<td>夕食</td>
-<td>¥5,000</td>
-<td></td>
-</tr>
-
-<tr>
-<td>昼食・カフェ等</td>
-<td>¥6,000</td>
-<td></td>
-</tr>
-
-<tr style="font-weight:bold;font-size:18px;">
-<td>合計</td>
-<td>¥29,100</td>
-<td></td>
-</tr>
-
+<tr><th>項目</th><th>金額</th></tr>
+<tr><td>高速・ガソリン</td><td>5,000円</td></tr>
+<tr><td>渦潮クルーズ</td><td>2,500円</td></tr>
+<tr><td>昼食（2回）</td><td>4,000円</td></tr>
+<tr><td>夜ご飯</td><td>5,000円</td></tr>
+<tr><td>カフェ・軽食</td><td>1,500円</td></tr>
+<tr><td>その他お土産</td><td>3,000円</td></tr>
+<tr class="total"><td>合計目安</td><td>約21,000円</td></tr>
 </table>
 
 </div>
-
-</div>
-
-<script>
-
-const photos=document.querySelectorAll(".photo");
-
-const observer=new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.classList.add("show");
-}
-});
-});
-
-photos.forEach(photo=>observer.observe(photo));
-
-</script>
 
 </body>
 </html>
