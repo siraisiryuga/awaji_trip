@@ -1,455 +1,207 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Awaji Island Journey 2026</title>
+<title>淡路島旅行 2026</title>
 
-<!-- キャッシュ強制回避 -->
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-<meta http-equiv="Pragma" content="no-cache">
-<meta http-equiv="Expires" content="0">
-
-<script>
-document.write('<meta name="cache-buster" content="'+Date.now()+'">');
-</script>
-
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;500&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
 
 body{
 margin:0;
-font-family:"Noto Sans JP", sans-serif;
-background:#F8F6F2;
+font-family:"Noto Serif JP", serif;
+background:#f4f4f4;
 color:#222;
 }
 
-/* 表紙 */
+
+/* ===== 表紙 ===== */
+
 .hero{
 position:relative;
 width:100%;
-height:92vh;
+height:100vh;
 overflow:hidden;
+background:#000;
 }
 
 .hero img{
+position:absolute;
+top:0;
+left:0;
 width:100%;
 height:100%;
 object-fit:cover;
-object-position:center center;
+object-position:center;
 }
 
-.hero-text{
+
+/* 中央配置オーバーレイ */
+
+.hero-overlay{
 position:absolute;
-bottom:8%;
+top:50%;
 left:50%;
-transform:translateX(-50%);
-color:white;
+transform:translate(-50%, -50%);
 text-align:center;
-padding:22px 42px;
-border-radius:14px;
-backdrop-filter:blur(8px);
-background:rgba(0,0,0,0.25);
+color:white;
+padding:40px;
+background:rgba(0,0,0,0.35);
+backdrop-filter:blur(6px);
+border-radius:12px;
 }
 
-.hero-text h1{
+
+/* タイトル */
+
+.hero-title{
 font-family:"Playfair Display", serif;
 font-size:48px;
-letter-spacing:4px;
-margin:0;
+letter-spacing:6px;
+margin-bottom:20px;
+line-height:1.4;
 }
 
-.hero-text p{
-margin-top:10px;
-font-size:16px;
-letter-spacing:2px;
+
+/* サブタイトル */
+
+.hero-sub{
+font-size:18px;
+letter-spacing:3px;
 opacity:0.9;
 }
 
-/* コンテンツ */
-.container{
-max-width:1000px;
-margin:auto;
-padding:60px 20px;
-}
 
-.card{
+/* ===== コンテンツ ===== */
+
+.section{
 background:white;
-padding:35px;
-margin:40px 0;
-border-radius:16px;
-box-shadow:0 10px 30px rgba(0,0,0,0.08);
-}
-
-/* テーブル */
-table{
-width:100%;
-border-collapse:collapse;
-}
-
-th,td{
-padding:16px;
-border-bottom:1px solid #eee;
-}
-
-th{
-background:#f5f5f5;
-font-weight:600;
-}
-
-/* 写真 */
-.photo{
-margin-top:40px;
-opacity:0;
-transform:translateY(40px);
-transition:1s;
-}
-
-.photo.show{
-opacity:1;
-transform:translateY(0);
-}
-
-.photo img{
-width:100%;
+margin:30px auto;
+padding:30px;
+width:90%;
+max-width:700px;
 border-radius:14px;
-transition:0.4s;
+box-shadow:0 4px 20px rgba(0,0,0,0.08);
 }
 
-.photo img:hover{
-transform:scale(1.02);
+.section-title{
+font-size:22px;
+margin-bottom:15px;
+border-bottom:1px solid #ddd;
+padding-bottom:8px;
 }
 
-.photo-title{
-font-weight:bold;
-font-size:18px;
-margin-top:12px;
+.schedule{
+line-height:1.9;
 }
 
-.photo-desc{
-color:#666;
-margin-top:4px;
+.cost{
+line-height:2;
 }
 
-/* ボタン */
-.button{
-display:inline-block;
-padding:12px 25px;
-background:#2d6cdf;
-color:white;
-border-radius:30px;
-text-decoration:none;
+.total{
+font-size:22px;
 margin-top:10px;
+font-weight:500;
 }
 
-.button:hover{
-background:#1f4fb5;
-}
-
-/* 料金表強調 */
-.total-row{
-font-weight:bold;
-font-size:20px;
-background:#fafafa;
+.footer{
+text-align:center;
+padding:40px;
+color:#888;
+font-size:14px;
 }
 
 </style>
-
 </head>
 
 <body>
 
-<!-- 表紙 -->
 
+<!-- 表紙 -->
 <div class="hero">
 
-<img src="cover_awaji.JPG">
+<img src="IMG_1234.JPG">
 
-<div class="hero-text">
-<h1>Awaji Island Journey</h1>
-<p>淡路島旅行記 — Spring 2026</p>
+<div class="hero-overlay">
+
+<div class="hero-title">
+AWAJI<br>
+ISLAND
 </div>
 
+<div class="hero-sub">
+SPRING TRIP 2026
 </div>
-
-
-<div class="container">
-
-<!-- ワリカ -->
-
-<div class="card">
-
-<h2>割り勘管理</h2>
-
-<a class="button"
-href="https://walica.jp/group/01KGCQRC2FBSX4T816A2XA2QYY"
-target="_blank">
-
-Walicaで確認する
-
-</a>
-
-</div>
-
-
-<!-- DAY1 -->
-
-<div class="card">
-
-<h2>Day 1 — 北淡路エリア</h2>
-
-<table>
-
-<tr>
-<th>時間</th>
-<th>内容</th>
-<th>詳細</th>
-</tr>
-
-<tr>
-<td>07:00</td>
-<td>名古屋 出発</td>
-<td>レンタカー</td>
-</tr>
-
-<tr>
-<td>10:30</td>
-<td>淡路島 到着</td>
-<td>淡路IC</td>
-</tr>
-
-<tr>
-<td>11:00</td>
-<td>昼食</td>
-<td>淡路夢舞台周辺</td>
-</tr>
-
-<tr>
-<td>12:30</td>
-<td>淡路夢舞台</td>
-<td>滞在 約1.5時間</td>
-</tr>
-
-<tr>
-<td>14:15</td>
-<td>ニジゲンノモリ</td>
-<td>滞在 約2時間</td>
-</tr>
-
-<tr>
-<td>16:45</td>
-<td>洲本方面へ移動</td>
-<td>車移動</td>
-</tr>
-
-<tr>
-<td>18:00</td>
-<td>チェックイン</td>
-<td>淡路シーサイドリゾート志築</td>
-</tr>
-
-<tr>
-<td>20:00</td>
-<td>居酒屋 濱</td>
-<td>夕食</td>
-</tr>
-
-</table>
-
-
-<div class="photo">
-<img src="awaji_yumebutai.JPG">
-<div class="photo-title">淡路夢舞台</div>
-<div class="photo-desc">安藤忠雄設計の建築美と自然が融合した淡路島の代表的スポット。</div>
-</div>
-
-<div class="photo">
-<img src="nijigen.JPG">
-<div class="photo-title">ニジゲンノモリ</div>
-<div class="photo-desc">アニメと自然が融合したテーマパーク。</div>
-</div>
-
-<div class="photo">
-<img src="takosenbei.JPG">
-<div class="photo-title">タコせんべいの里</div>
-<div class="photo-desc">人気のお土産スポット。</div>
-</div>
-
-<div class="photo">
-<img src="izakaya.JPG">
-<div class="photo-title">居酒屋 濱</div>
-<div class="photo-desc">淡路島の新鮮な海鮮を楽しめる人気居酒屋。</div>
-</div>
-
-</div>
-
-
-<!-- DAY2 -->
-
-<div class="card">
-
-<h2>Day 2 — 南淡路エリア</h2>
-
-<table>
-
-<tr>
-<th>時間</th>
-<th>内容</th>
-<th>詳細</th>
-</tr>
-
-<tr>
-<td>08:30</td>
-<td>起床・準備</td>
-<td></td>
-</tr>
-
-<tr>
-<td>09:30</td>
-<td>チェックアウト</td>
-<td>宿出発</td>
-</tr>
-
-<tr>
-<td>10:00</td>
-<td>長手長栄堂</td>
-<td>おやつ・お土産</td>
-</tr>
-
-<tr>
-<td>11:20</td>
-<td>道の駅うずしお</td>
-<td>昼食</td>
-</tr>
-
-<tr>
-<td>13:30</td>
-<td>渦潮クルーズ</td>
-<td>乗船</td>
-</tr>
-
-<tr>
-<td>15:00</td>
-<td>おっ玉葱</td>
-<td>観光</td>
-</tr>
-
-<tr>
-<td>15:30</td>
-<td>淡路島 出発</td>
-<td></td>
-</tr>
-
-<tr>
-<td>19:30〜20:00</td>
-<td>名古屋 到着</td>
-<td></td>
-</tr>
-
-</table>
-
-<div class="photo">
-<img src="uzushio.JPG">
-<div class="photo-title">渦潮クルーズ</div>
-<div class="photo-desc">世界最大級の渦潮を体験。</div>
-</div>
-
-<div class="photo">
-<img src="ottamanegi.JPG">
-<div class="photo-title">おっ玉葱</div>
-<div class="photo-desc">淡路島定番フォトスポット。</div>
-</div>
-
-</div>
-
-
-<!-- 料金概算 -->
-
-<div class="card">
-
-<h2>料金概算（1人あたり）</h2>
-
-<table>
-
-<tr>
-<th>項目</th>
-<th>金額</th>
-<th>備考</th>
-</tr>
-
-<tr>
-<td>レンタカー</td>
-<td>¥6,000</td>
-<td>2日間・保険込み</td>
-</tr>
-
-<tr>
-<td>ガソリン・高速</td>
-<td>¥5,000</td>
-<td>往復 約450km</td>
-</tr>
-
-<tr>
-<td>宿泊費</td>
-<td>¥8,000</td>
-<td>1泊</td>
-</tr>
-
-<tr>
-<td>渦潮クルーズ</td>
-<td>¥3,000</td>
-<td>確定</td>
-</tr>
-
-<tr>
-<td>昼食（2回）</td>
-<td>¥4,000</td>
-<td>淡路牛・海鮮など</td>
-</tr>
-
-<tr>
-<td>夕食（居酒屋 濱）</td>
-<td>¥5,000</td>
-<td></td>
-</tr>
-
-<tr>
-<td>カフェ・間食・お土産</td>
-<td>¥3,000</td>
-<td></td>
-</tr>
-
-<tr class="total-row">
-<td>合計</td>
-<td>¥34,000</td>
-<td>概算</td>
-</tr>
-
-</table>
 
 </div>
 
 </div>
 
 
-<script>
+<!-- 日程 -->
+<div class="section">
 
-const photos=document.querySelectorAll(".photo");
+<div class="section-title">
+日程表
+</div>
 
-const observer=new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.classList.add("show");
-}
-});
-});
+<div class="schedule">
 
-photos.forEach(photo=>observer.observe(photo));
+<b>1日目</b><br>
 
-</script>
+09:00　出発<br>
+12:30　淡路SA 到着<br>
+13:30　渦潮クルーズ<br>
+15:30　観光・カフェ<br>
+18:30　チェックイン<br>
+19:30　夕食<br>
+
+<br>
+
+<b>2日目</b><br>
+
+09:00　起床<br>
+10:30　観光<br>
+12:00　道の駅うずしお 昼食<br>
+14:00　出発<br>
+18:00　帰宅<br>
+
+</div>
+
+</div>
+
+
+<!-- 割り勘 -->
+<div class="section">
+
+<div class="section-title">
+料金概算
+</div>
+
+<div class="cost">
+
+宿泊　¥8,000<br>
+レンタカー　¥5,000<br>
+ガソリン　¥2,000<br>
+高速　¥3,000<br>
+食費　¥5,000<br>
+
+<div class="total">
+合計　¥23,000 / 人
+</div>
+
+</div>
+
+</div>
+
+
+<div class="footer">
+Awaji Island Trip 2026
+</div>
 
 
 </body>
