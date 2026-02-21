@@ -33,16 +33,13 @@ body{
 /* ===== 表紙（横長画面・タイトル下寄せ）===== */
 .hero{
   position:relative;
-  width:100%;
+  width:100vw;
   height:100vh;
   background-image:url("cover_awaji.JPG");
-  background-size:cover;          /* 画面いっぱいに表示 */
-  background-position:center center; /* 横長でも中央にフィット */
   background-repeat:no-repeat;
   display:flex;
   align-items:flex-end;           /* タイトル下寄せ */
   justify-content:center;
-  padding-bottom:60px;            /* 下余白 */
 }
 
 .hero::after{
