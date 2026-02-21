@@ -27,8 +27,11 @@ background:#F8F6F2;
 color:#222;
 }
 
+/* HERO 最適化 */
 .hero{
-height:90vh;
+height:92vh;
+min-height:500px;
+max-height:900px;
 position:relative;
 overflow:hidden;
 }
@@ -37,16 +40,28 @@ overflow:hidden;
 width:100%;
 height:100%;
 object-fit:cover;
+object-position:center;
+filter:brightness(0.85);
 }
 
 .hero-text{
 position:absolute;
 bottom:15%;
-left:10%;
+left:8%;
 color:white;
-background:rgba(0,0,0,0.35);
-padding:20px 30px;
-border-radius:10px;
+text-shadow:0 4px 20px rgba(0,0,0,0.5);
+}
+
+.hero-text h1{
+font-family:"Playfair Display", serif;
+font-size:64px;
+margin:0;
+letter-spacing:4px;
+}
+
+.hero-text p{
+font-size:20px;
+margin-top:10px;
 }
 
 .container{
@@ -57,16 +72,13 @@ padding:60px 20px;
 
 .card{
 background:white;
-padding:30px;
+padding:35px;
 margin:40px 0;
-border-radius:15px;
+border-radius:16px;
 box-shadow:0 10px 30px rgba(0,0,0,0.08);
 }
 
-h2{
-margin-top:0;
-}
-
+/* table */
 table{
 width:100%;
 border-collapse:collapse;
@@ -82,6 +94,7 @@ th{
 background:#f5f5f5;
 }
 
+/* photo animation */
 .photo{
 margin-top:40px;
 opacity:0;
@@ -96,7 +109,7 @@ transform:translateY(0);
 
 .photo img{
 width:100%;
-border-radius:12px;
+border-radius:14px;
 transition:0.4s;
 }
 
@@ -116,30 +129,39 @@ color:#666;
 
 .button{
 display:inline-block;
-padding:12px 25px;
+padding:12px 26px;
 background:#2d6cdf;
 color:white;
 border-radius:30px;
 text-decoration:none;
-margin-top:10px;
+margin-top:15px;
 }
 
-.total-row{
-font-weight:bold;
-font-size:18px;
-background:#f9f9f9;
+.button:hover{
+background:#1f4fb5;
+}
+
+/* responsive */
+@media(max-width:768px){
+
+.hero-text h1{
+font-size:42px;
+}
+
+.hero-text p{
+font-size:16px;
+}
+
 }
 
 </style>
-
 </head>
 
 <body>
 
 <!-- HERO -->
-
 <div class="hero">
-<img src="cover_awaji.JPG">
+<img src="cover_awaji.JPG?v=4">
 <div class="hero-text">
 <h1>AWAJI ISLAND</h1>
 <p>SPRING TRIP 2026</p>
@@ -149,13 +171,12 @@ background:#f9f9f9;
 <div class="container">
 
 <!-- WALICA -->
-
 <div class="card">
 
-<h2>割り勘管理（Walica）</h2>
+<h2>割り勘管理</h2>
 
 <a class="button"
-href="https://walica.jp/group/01KGCQRC2FBSX4T816A2XA2QYY?v=20260308"
+href="https://walica.jp/group/01KGCQRC2FBSX4T816A2XA2QYY?v=4"
 target="_blank">
 
 ワリカを開く
@@ -166,7 +187,6 @@ target="_blank">
 
 
 <!-- DAY1 -->
-
 <div class="card">
 
 <h2>Day 1 — 北淡路エリア</h2>
@@ -199,7 +219,7 @@ target="_blank">
 
 <tr>
 <td>12:30</td>
-<td>淡路島夢舞台</td>
+<td>淡路夢舞台</td>
 <td>滞在 約1.5時間</td>
 </tr>
 
@@ -212,12 +232,12 @@ target="_blank">
 <tr>
 <td>16:45</td>
 <td>洲本方面へ移動</td>
-<td>車移動</td>
+<td></td>
 </tr>
 
 <tr>
 <td>18:00</td>
-<td>チェックイン</td>
+<td>宿 チェックイン</td>
 <td>淡路シーサイドリゾート志築</td>
 </tr>
 
@@ -229,36 +249,28 @@ target="_blank">
 
 </table>
 
-
 <div class="photo">
-<img src="awaji_yumebutai.JPG">
+<img src="awaji_yumebutai.JPG?v=4">
 <div class="photo-title">淡路夢舞台</div>
-<div class="photo-desc">安藤忠雄建築による美しい複合施設。海と建築が融合した淡路島の代表スポット。</div>
+<div class="photo-desc">建築と自然が融合した淡路島を代表する美しいランドスケープ。</div>
 </div>
 
 <div class="photo">
-<img src="nijigen.JPG">
+<img src="nijigen.JPG?v=4">
 <div class="photo-title">ニジゲンノモリ</div>
-<div class="photo-desc">自然とアニメ・ゲームが融合したテーマパーク。</div>
+<div class="photo-desc">アニメ・ゲームの世界を体験できる人気テーマパーク。</div>
 </div>
 
 <div class="photo">
-<img src="takosenbei.JPG">
-<div class="photo-title">タコせんべいの里</div>
-<div class="photo-desc">試食自由で人気のお土産スポット。</div>
-</div>
-
-<div class="photo">
-<img src="izakaya.JPG">
+<img src="izakaya.JPG?v=4">
 <div class="photo-title">居酒屋 濱</div>
-<div class="photo-desc">淡路島の新鮮な魚介を楽しめる居酒屋。</div>
+<div class="photo-desc">地元の海鮮と淡路島グルメを楽しめる名店。</div>
 </div>
 
 </div>
 
 
 <!-- DAY2 -->
-
 <div class="card">
 
 <h2>Day 2 — 南淡路エリア</h2>
@@ -273,14 +285,14 @@ target="_blank">
 
 <tr>
 <td>08:30</td>
-<td>起床</td>
-<td>準備</td>
+<td>起床・準備</td>
+<td></td>
 </tr>
 
 <tr>
 <td>09:30</td>
 <td>チェックアウト</td>
-<td>宿出発</td>
+<td></td>
 </tr>
 
 <tr>
@@ -297,8 +309,8 @@ target="_blank">
 
 <tr>
 <td>12:30</td>
-<td>クルーズ受付</td>
-<td>福良港</td>
+<td>うずしおクルーズ受付</td>
+<td></td>
 </tr>
 
 <tr>
@@ -316,37 +328,42 @@ target="_blank">
 <tr>
 <td>15:30</td>
 <td>淡路島 出発</td>
-<td>名古屋へ</td>
+<td></td>
 </tr>
 
 <tr>
 <td>19:30〜20:00</td>
 <td>名古屋 到着</td>
-<td>解散</td>
+<td></td>
 </tr>
 
 </table>
 
 <div class="photo">
-<img src="uzushio.JPG">
+<img src="uzushio.JPG?v=4">
 <div class="photo-title">渦潮クルーズ</div>
-<div class="photo-desc">世界最大級の渦潮を体験。</div>
+<div class="photo-desc">世界最大級の渦潮を間近で体験できる特別なクルーズ。</div>
 </div>
 
 <div class="photo">
-<img src="ottamanegi.JPG">
+<img src="ottamanegi.JPG?v=4">
 <div class="photo-title">おっ玉葱</div>
-<div class="photo-desc">淡路島の巨大玉ねぎフォトスポット。</div>
+<div class="photo-desc">淡路島を象徴する巨大玉ねぎフォトスポット。</div>
+</div>
+
+<div class="photo">
+<img src="takosenbei.JPG?v=4">
+<div class="photo-title">タコせんべいの里</div>
+<div class="photo-desc">人気のお土産スポット。</div>
 </div>
 
 </div>
 
 
 <!-- COST -->
-
 <div class="card">
 
-<h2>料金概算表（1人あたり）</h2>
+<h2>料金概算（1人あたり）</h2>
 
 <table>
 
@@ -363,39 +380,39 @@ target="_blank">
 </tr>
 
 <tr>
-<td>ガソリン・高速</td>
+<td>高速・ガソリン</td>
 <td>¥3,000</td>
-<td>往復</td>
+<td></td>
 </tr>
 
 <tr>
 <td>宿泊</td>
 <td>¥7,800</td>
-<td>確定</td>
+<td></td>
 </tr>
 
 <tr>
-<td>クルーズ</td>
+<td>渦潮クルーズ</td>
 <td>¥3,000</td>
-<td>確定</td>
+<td></td>
 </tr>
 
 <tr>
 <td>夕食</td>
 <td>¥5,000</td>
-<td>概算</td>
+<td></td>
 </tr>
 
 <tr>
-<td>昼食等</td>
-<td>¥2,000</td>
-<td>概算</td>
+<td>昼食・カフェ等</td>
+<td>¥6,000</td>
+<td></td>
 </tr>
 
-<tr class="total-row">
+<tr style="font-weight:bold;font-size:18px;">
 <td>合計</td>
-<td>¥25,100</td>
-<td>目安</td>
+<td>¥29,100</td>
+<td></td>
 </tr>
 
 </table>
@@ -403,7 +420,6 @@ target="_blank">
 </div>
 
 </div>
-
 
 <script>
 
